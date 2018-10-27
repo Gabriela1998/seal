@@ -1,0 +1,89 @@
+*
+{
+	margin:0;
+}
+body, html {
+    height: 100%;
+}
+
+
+
+.parallax {
+    /* The image used */
+    background-image: url('../img/flower_background.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo
+{
+	width: 25%;
+	position: absolute;
+    left: 20px;
+    top: -70px;
+}
+
+/*STICKY MENU*/
+.sticky-menu
+{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height: 52px;
+  position: absolute;
+  top:0; /*sticky navigation bar */
+  z-index: 2;
+  width: 50%;
+  right: 0;
+}
+.menu-list 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+/*  border-bottom: 1px solid #D5D5D5;
+  border-top: 1px solid #D5D5D5;*/
+  text-align:right;
+  height: 50px;
+}
+
+.menu-element {
+  display: inline;
+  width:120px;
+  padding: 10px 20px 10px 20px;
+  height: 100%;
+  margin: 0 15px;
+  border: 2px transparent solid;
+}
+.menu-element:hover
+{
+  /*background-color: rgba(213, 213, 213, 0.6);*/
+  cursor: pointer;
+  color: #ffdc00;
+  border: 2px #ffdc00 solid;
+  border-radius: 5px;
+}
+.menu-element .a-element {
+    display: inline-block;
+    padding: 19px 0;
+    text-decoration: none;
+    font-family: 'KoHo', sans-serif;
+    font-size: 13px;
+    color: white;
+
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
