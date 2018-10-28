@@ -3,28 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>SEAL</title>
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="assets/css/form.css">
   </head>
   <body>
-    <div class="login-form">
-      <form action="register.php">
+    <form action="register.php" style="border:1px solid #ccc">
+      <div class="container">
         <div class="logo-container">
-          <img src="css/media/logo2.jpg" alt="logo" class="logo">
+          <img src="assets/media/logo2.jpg" alt="logo">
         </div>
+        <h1>Register</h1>
+        <hr>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Enter username" name="username" required>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Your email here" name="email" required>
 
-        <label for="password">Password</label>
-        <input type="text" placeholder="Enter password" name="password" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <label for="conf-password">Confirm password</label>
-        <input type="text" placeholder="Enter same password" name="password" required>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Enter same password" name="psw-repeat" required>
 
-        <button class="simple-reg" type="submit">Login</button>
+        <hr>
 
-        <button class="facebook-reg" type="quick-register"><span class="icon"></span>Register with Facebook</button>
-      </form>
-    </div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" class="greenbtn">Sign up</button>
+          <button type="submit" class="quickbtn">Quick sign up</button>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
