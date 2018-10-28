@@ -13,7 +13,7 @@ body, html {
     background-image: url('../img/flower_background.jpg');
 
     /* Full height */
-    height: 100%; 
+    height: 100%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -43,7 +43,7 @@ body, html {
   width: 50%;
   right: 0;
 }
-.menu-list 
+.menu-list
 {
   list-style-type: none;
   margin: 0;
