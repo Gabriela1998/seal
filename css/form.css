@@ -1,14 +1,13 @@
 .login-form{
-  display: block;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
   align-content: center;
+  position: fixed;
 }
 
 form{
-  position: relative;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+  display: inline-grid;
 }
 
 .facebook-log .icon{
