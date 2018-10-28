@@ -22,6 +22,21 @@ body, html {
     background-size: cover;
 }
 
+.parallax2 {
+    /* The image used */
+    /* background-image: url('../img/parallax2.jpg'); */
+		background: white;
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #logo
 {
 	width: 25%;
