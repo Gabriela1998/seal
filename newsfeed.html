@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+<link rel="stylesheet" href="assets/css/alerts.css">
 <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -10,6 +11,17 @@
 </head>
 <body>
 <script>
+function showMoreAlert(id) {
+    var alert = document.getElementById("alert"+id);
+    var button = document.getElementById("showMoreAlert");
+    if(alert.className == "alert less"){
+      alert.className = "alert more";
+      button.innerText = "Show less";
+    } else {
+      alert.className = "alert less";
+      button.innerText = "Show more";
+    }
+}
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -38,13 +50,13 @@ function myFunction() {
       </div>
   </div>
 
-  <div class="descriere">
+  <div class="descrieere" style="z-index: 3;">
     <div class="alert-list">
-      <div class="alert">
+      <div id="alert1" class="alert less">
         <div class="title">
           <h1 style="width: auto; color: black;">Do You Have Winter Allergies?</h1>
         </div>
-
+        <button onclick="showMoreAlert(1)" id="showMoreAlert" class="edit-button">Show more</button>
         <div class="topic">
           <div class="mini-title">
             <h2>Intro</h2>
@@ -55,7 +67,7 @@ function myFunction() {
               as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.</p>
           </div>
         </div>
-        <hr>
+        <hr class="for-alert-list">
         <div class="topic">
           <div class="mini-title">
             <h2>Causes</h2>
@@ -72,7 +84,58 @@ function myFunction() {
               </ul>
           </div>
         </div>
-        <hr>
+        <hr class="for-alert-list">
+        <div class="topic">
+          <div class="mini-title">
+            <h2>Symptoms</h2>
+          </div>
+
+          <div class="content">
+            <p>Allergy symptoms caused by dust, pollen, or mold include:</p>
+            <ul>
+              <li>Coughing</li>
+              <li>Dark circles under the eyes</li>
+              <li>Itchy eyes and nose</li>
+              <li>Runny nose</li>
+            </ul>
+            <p>How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesn't last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="alert2" class="alert less">
+        <div class="title">
+          <h1 style="width: auto; color: black;">Do You Have Winter Allergies?</h1>
+        </div>
+        <button onclick="showMoreAlert(2)" id="showMoreAlert" class="edit-button">Show more</button>
+        <div class="topic">
+          <div class="mini-title">
+            <h2>Intro</h2>
+          </div>
+
+          <div class="content">
+            <p>If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such
+              as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.</p>
+          </div>
+        </div>
+        <hr class="for-alert-list">
+        <div class="topic">
+          <div class="mini-title">
+            <h2>Causes</h2>
+          </div>
+
+          <div class="content">
+            <p>When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air.
+              They can get into your nose and launch a reaction.
+
+              Some common indoor allergy triggers are:</p>
+              <ul>
+                <li>Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.</li>
+                <li>Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.</li>
+              </ul>
+          </div>
+        </div>
+        <hr class="for-alert-list">
         <div class="topic">
           <div class="mini-title">
             <h2>Symptoms</h2>

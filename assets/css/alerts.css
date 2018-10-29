@@ -1,14 +1,14 @@
 .alert-list {
-  margin: 2em;
+  margin: 2em 2em 2em 2em;
   border: 2px solid #ffdc00;
   border-radius: 5px;
-  padding: 2%;
+  /* border-width: thin; */
   display: grid;
-  grid-template-columns: 30% 30% 30%;
   /* grid-template-rows: auto; */
 }
 
 .alert {
+  margin: 2em 2em 2em 2em;
   font-stretch: extra-expanded;
   font-size: 20px;
   letter-spacing: 0.03rem;
@@ -16,17 +16,31 @@
   color : black;
   max-width: 95%;
   font-weight: 100;
-
-  margin: 2em;
   border: 2px dotted #ffdc00;
   border-radius: 5px;
-  padding: 2%;
-  display: grid;
-  grid-template-columns: 95%;
 }
 
-.alert > div {
-  padding: 5px;
+.alert {
+  display: inline-grid;
+  grid-template-columns: 95%;
+}
+.alert.more {
+  max-width: 95%;
+}
+
+.alert.less {
+  border: none;
+  max-width: 95%;
+}
+.alert.less > .for-alert-list{
+  display: none;
+}
+.alert.less > .topic{
+  display: none;
+}
+
+.alert > .topic {
+  margin: 1em 1em 1em 1em;
   display: inline-grid;
 }
 
@@ -41,16 +55,68 @@
 }
 
 @media screen and (max-width: 850px) {
+  .alert-list {
+
+  }
   .alert {
     grid-template-columns: 95%;
   }
 
-  .descriere {
-    margin: 10px;
+  .descrieree {
+
   }
 }
 
 hr {
+  max-width: 90%;
   border: 1px dotted #ffdc00;
   margin-bottom: 25px;
 }
+
+.edit-button {
+  float: left;
+	background-color:#ffdc00;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:2px dashed #ffdc00;
+	display:inline-block;
+	cursor:pointer;
+	color:#000;
+	font-family: 'Roboto Mono', monospace;
+	font-size:17px;
+	padding:2px 10px;
+	text-decoration:none;
+	max-width: 140px;
+	height: 30px;
+	margin:auto;
+}
+.edit-button:hover {
+	border:2px dashed #000000;
+}
+/* .edit-button:active {
+	position:fixed;
+	top:1px;
+} */
+
+/* #showMoreAlert {
+  float: right;
+  display: inline;
+  margin: 10px 15px;
+  border: 2px transparent solid;
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'KoHo', sans-serif;
+  font-size: 13px;
+  color: black;
+
+}
+
+#showMoreAlert:hover {
+
+  cursor: pointer;
+  color: #ffdc00;
+  border: 2px #ffdc00 solid;
+  border-radius: 5px;
+} */
