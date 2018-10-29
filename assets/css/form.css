@@ -11,7 +11,7 @@ body {
 /* Full-width input fields */
   input[type=text], input[type=password] {
   width: 93%;
-  padding: 15px;
+  padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
@@ -25,7 +25,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 hr {
   border: 1px solid #ffdc00;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* Set a style for all buttons */
@@ -60,10 +60,10 @@ button:hover {
 }
 
 form {
-  /* max-height: 70%; */
+  /* max-height: 30%; */
   /* background-color: #C0C0C0; */
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
   margin-top: 10px;
   /* margin-bottom: 15%; */
   border:2px solid #ffdc00;
@@ -74,8 +74,7 @@ form {
   height: 200px;
   display: grid;
   grid-template:" . img .";
-  grid-template-columns: 33% 33% 33%;
-
+  grid-template-columns: auto 200px auto;
 }
 
 .logo-container img {
@@ -102,19 +101,36 @@ form {
   color:#ffdc00;
 }
 
-.callJsFromLink > a {
-  /* color:#ffdc00; */
+h2 {
+  padding: 2px;
 }
+
 @media screen and (max-width: 1200px) {
   form {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 @media screen and (max-width: 900px) {
+  .clearfix{
+    display: grid;
+    grid-template:
+    ". but1 ."
+    ". but2 .";
+    grid-template-columns: 20% 60% 20%;
+  }
+  .greenbtn, .quickbtn{
+    width: 100%;
+  }
+  .greenbtn {
+    grid-area: but1;
+  }
+  .quickbtn {
+    grid-area: but2;
+  }
   form {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
 /* Change styles for cancel button and signup button on extra small screens */
