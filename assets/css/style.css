@@ -36,9 +36,10 @@ body, html {
     /* The image used */
     /* background-image: url('../img/parallax2.jpg'); */
 		background: white;
-
     /* Full height */
     height: 100%;
+    position: absolute;
+    z-index: 2;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -147,7 +148,7 @@ body, html {
 }
 
 @media screen and (max-width: 850px) {
-  .topnav.responsive 
+  .topnav.responsive
   {
     position: relative;
     text-align: center;
