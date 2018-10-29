@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<artifacts>
+  <artifact id="1">
+    <artifact_name>Test1</artifact_name>
+    <artifact_year>1600 BC</artifact_year>
+    <artifact_owner>The State Museum of Prehistory in Halle</artifact_owner>
+    <artifact_description>The Nebra Sky Disc was discovered in Ziegelroda Forest, Saxony-Anhalt, Germany.  It had been ritually buried in a prehistoric enclosure atop a hill (the Mittelberg), along with two precious swords, two axes, two spiral arm-rings and one bronze chisel. The disc measures approximately 30 cm in diameter, weighs 2.2 kg, and is decorated with a blue-green patina and inlaid with gold symbols. These are interpreted generally as a sun or full moon, a lunar crescent, and stars (including a cluster interpreted as the Pleiades). Two golden arcs along the sides were added later. The two arcs span an angle of 82°, correctly indicating the angle between the positions of sunset at summer and winter solstice at the latitude of the Mittelberg (51°N).</artifact_description>
+    <artifact_image>"assets/img/nebra-sky-disc.jpg"</artifact_image>
+    <artifact_region>Germany</artifact_region>
+  </artifact>
+
+  <artifact id="2">
+    <artifact_name>Test2</artifact_name>
+    <artifact_year>2000 BC</artifact_year>
+    <artifact_owner>Director of the Wiltshire Museum</artifact_owner>
+    <artifact_description>In 1808, William Cunnington, one of Britain's earliest professional archaeologists, discovered what has become known as the crown jewels of the King of Stonehenge. They were found within a large Bronze Age burial mound just mile from Stonehenge, known today as Bush Barrow. Within the year-old barrow, Cunnington found ornate jewellery, a gold lozenge that fastened his cloak, and an intricately decorated dagger. The dagger was originally adorned with up to 140,000 tiny gold studs just a third of a millimetre wide.</artifact_description>
+    <artifact_image>"assets/img/bush-barrow-dagger.jpg"</artifact_image>
+    <artifact_region>England</artifact_region>
+  </artifact>
+</artifacts>

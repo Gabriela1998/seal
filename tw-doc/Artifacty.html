@@ -1,0 +1,398 @@
+﻿
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="project, infoiasi, web, social, friends, photos, videos, media" /> 
+    <title>Artifacty</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <link rel="stylesheet" href="prism-coy.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">Artifacty</p>
+      <p class="subtitle">Artifacty</p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>Artifacty</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Șerban Mihai</span>
+              <span property="schema:familyName">Botez</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Gabriela</span>
+              <span property="schema:familyName">Bîrsanu</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Roxana Andreea</span>
+              <span property="schema:familyName">Coteț</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="#" typeof="schema:Person">
+              <span property="schema:givenName">Maria-Alexandra</span>
+              <span property="schema:familyName">Purice</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          În conținutul lucrarii se regasesc urmatoarele: Introducere, Tehnologii utilizate, Arhitectura aplicatiei, Etapele de dezvoltare, Concluzie, Bibliografie
+        </p>
+      </section>
+      <section typeof="sa:Introducere" id="intro">
+        <h2>Introducere</h2>
+        <p>
+          Artifacty este o aplicație Web ce realizează managementul informațiilor privitoare la colecții de artefacte arheologice. Aplicația oferă descrieri amănunțite alea artefactelor, de asemenea orice utilizator al aplicației poate adăuga artefacte noi prin intermediul unui formular si de editare a datelor cu privire la artefactele introduse de ei. Adminul având dreptul de a accepta sau de a refuza artefacte, de a importa si exporta. 
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="tehnologii">
+        <h2>Tehnologii</h2>
+        <h3>HTML</h3>
+        <p>
+          HyperText Markup Language (HTML) este un limbaj de marcare utilizat pentru crearea paginilor web ce pot fi afișate într-un browser (sau navigator). Scopul HTML este mai degrabă prezentarea informațiilor – paragrafe, fonturi, tabele ș.a.m.d. – decât descrierea semanticii documentului.HTML este prescurtarea de la Hyper Text Mark-up Language si este codul care sta la baza paginilor web. Va fi folosit in cadrul scheletului principal al proiectului .
+        </p>
+        <h3>CSS</h3>
+        <p>
+          CSS (Cascading Style Sheets) este un standard pentru formatarea elementelor unui document HTML. Stilurile se pot atașa elementelor HTML prin intermediul unor fișiere externe sau în cadrul documentului. CSS se poate utiliza și pentru formatarea elementelor XHTML, XML și SVGL.
+          Intregul design al aplicatiei se va fi realizat si formatat prin intermediul CSS.
+        </p>
+        <h3>Javascript / Xmlhttprequest</h3>
+        <p>
+          JavaScript (JS) este un limbaj de programare orientat obiect bazat pe conceptul prototipurilor. Este folosit mai ales pentru introducerea unor funcționalități în paginile web, codul Javascript din aceste pagini fiind rulat de către browser.
+          Xmlhttprequest este un obiect Javascript care permite obținerea de date în format XML (dar și HTML sau text simplu) cu ajutorul unui request HTTP.
+          Acest obiect este utilizat în cadrul tehnologiilor Ajax .
+          Cele doua tehnologii vor fi folosite in cadrul aplicatiei pentru validare client-side, animatii si cereri de tip AJAX.
+        </p>
+        
+        <h3>PHP5.7</h3>
+        <p>
+          Numele PHP provine din limba engleză și este un acronim recursiv: Php: Hypertext Preprocessor. Folosit inițial pentru a produce pagini web dinamice, este folosit pe scară largă în dezvoltarea paginilor și aplicațiilor web. Se folosește în principal înglobat în codul HTML. 
+        </p>
+        <h3>GitHub</h3>
+        <p>
+          Reprezinta un sistem de control al versiunilor codului sursa care va fi folosit pentru o mai buna administrare cat si pentru lucrul in echipa.
+        </p>
+        <h3>MySQL</h3>
+        <p>
+          MySQL este un sistem de gestiune a bazelor de date relaționale care va fi folosit pentru gestionarea bazei de date necesara aplicatiei web.
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="arhitectura">
+        <h2>Arhitectura aplicatiei</h2>
+        <p>
+          Utilizand tehnologiile mentionate in sectiunea anterioara, aplicatia va fi structurata in mai multe module, dupa cum urmeaza:
+        </p>
+        <p><strong>1. Register / Login</strong></p>
+        <p>
+          Pentru a putea interacționa cu aplicația, fiecare utilizator trebuie sa se înregistreze. Formularul de înregistrare va conține date personale
+          precum username-ul adresa de email, precum și o parola care va fi folosita pentru autentificare. În momentul în care utilizatorul
+          trimite datele, acestea sunt verificate și, în cazul în care acestea sunt corecte, se introduc în baza de date, iar utilizatorul este redirecționat
+          către pagina de login. În cazul în care datele nu sunt valide, userul va primi feedback și i se va cere reintroducerea unor date valide.
+          În momentul în care utilizatorul este deja înregistrat și doreste autentificarea, va introduce username-ul și parola. Serverul preia datele, le verifică și trimite unul din două răspunsuri:
+          <ul>
+            <li>În cazul în care datele sunt corecte, userul va fi redirecționat către pagina principala</li>
+            <li>În cazul în care datele nu sunt valide, utilizatorul va primi un mesaj corespunzător și va trebui sa reintroduca datele</li>
+          </ul>
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/login.png" alt="Login page">
+            <figcaption> Pagina de login </figcaption>
+        </figure>
+
+        <p><strong>2. Pagina principală </strong></p>
+        <p>
+          După logare, utilizatorul este redirectat către pagina principală care variază în funcție de rol (administrator sau utilizator propriu-zis al aplicației). Clientul beneficiază de un meniu fix din care se poate redirecta către diferite pagini: lista de artefacte, statistici și opțiunile specifice fiecărui tip de utilizator în pagina de Profil.
+          Un slideshow cu imagini va rula în pagina, apoi o descriere mica a aplicație îl va introduce pe utilizator în comunitatea iubitorilor de artefacte.
+          Footerul conține informații de contact cu privire la realizatorii apicației.
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/home.png" alt="home">
+            <figcaption> Pagina principală </figcaption>
+        </figure>
+
+        <p><strong>3. Filtrare</strong></p>
+        <p>
+          Ofera posibilitatea utilizatorului de a căuta un anumit artefact un funcție de taguri, nume, an. De asemenea, utilizatorul poate folosi opțiunea de filtrare pentru a gasi anumite artefacte dupa un criteriu bine stabilit (anumiti ani, anumite locatii). Rezultatele vor fi afișate în chenarele din centrul aceleiași pagini. Pentru chenarul de cautare s-a folosit un form cu 2 chenare(introducerea datelor dupa care se realizeaza cautarea si butonul de submit). Pentru filtrare s-a folosit un select cu outgroup-uri și label-uri pentru a afișa criteriile prestabilite.
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/Filtrare.png" alt="filter">
+            <figcaption> Pagina principală </figcaption>
+        </figure>
+
+        <p><strong>4. Profile</strong></p>
+        <p>
+            Pe pagina de profil a unui utilizator normal, utilizatorul va putea vedea un sumar al artefactelor introduse, fie ele acceptate, fie în curs de validare/respingere. Artefactele pot fi editate direct din aceasta pagina. De asemenea are la dispoziție un buton către pagina în care se află formularul de adăugare a unui artefact.
+
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/user.png" alt="profile">
+            <figcaption> Pagina de profil utilizator normal </figcaption>
+        </figure>
+        <p>
+            Pe pagina de profil adminului, adminul va putea vedea un sumar al artefactelor trimise de catre utilizatori pe care poate sa le acceptate sau să le respingă. Are la dispoziție două butoane, unul de import și unul de export, unde va putea importa și exporta fișiere de tipul CSV, JSON si XML. Apăsând pe numele artefactului se va deschide un pop-up în care se vor regăsi toate informațiile introduse. Acesta poate accepte artefacutul apasand butonul ACCEPT urmând să fie introdusă în lista de artefacte, sau să îl respingă apăsând butonul REJECT.
+
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/admin.png" alt="admin">
+            <figcaption> Pagina de profil admin </figcaption>
+        </figure>
+
+        <p><strong>5. Formular de adaugare a unui artefact </strong></p>
+        <p>
+            In acest formular, vor fi trecute urmatoarele date:
+        </p>
+        <ul>
+            <li> Numele artefactului (Obligatoriu)</li>
+            <li> Anul descoperirii(începe cu o cifră, obligatoriu)</li>
+            <li> Regiunea </li>
+            <li> Muzeul în care se află sau deținătorul (Obligatoriu) </li>
+            <li> Descriere(Obligatoriu) </li>
+            <li> O imagine(Obligatoriu) </li>
+        </ul>
+        <p>
+            În momentul în care utilizatorul apasă pe butonul de submit, se face verificarea datelor introduse și, în cazul în care toate sunt valide. În cazul în care sunt erori, acestea vor fi afișate in locul corespunzator pe pagina formularului.
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/Form.png" alt="form">
+            <figcaption> Formular de adaugare a unui artefact </figcaption>
+        </figure>
+        <p><strong>6. Pagina de descriere a unui artefact </strong></p>
+        <p>
+            Fiecare artefact are un meniu verical cu ancore, in pagina, pentru o deplasare mai usoara și contine toate informatiile despre acel artefact selectat anterior intr-o pagina anterioara. 
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/description.png" alt="description">
+            <figcaption> Pagina descriere </figcaption>
+        </figure>
+        <p><strong>7. Statistici </strong></p>
+        <p>
+           Păstrează formatul paginii cu formularul. În această pagină se vor realiza statistici cu privire la artefcatele pe care le vom aveam in baza de date. 
+           Am folosit butoane care deschid un meniu dropdown din care se pot alege anumite criterii pe care să se realizeze  statiticile și un buton care să le genereze într-un modal box.  În acel modal box va apărea o poza a un grafic ce va reprezenta statistica dorită.
+
+        </p>
+        <figure typeof = "sa:Image">
+            <img src="images/Statistici.png" alt="statistics">
+            <figcaption> Statistici </figcaption>
+        </figure>
+
+      </section>
+      
+      <section typeof="sa:MaterialsAndMethods" id="utilizatori">
+        <h2> Tipuri de utilizatori </h2>
+        <h3>1. Admin </h3>
+        <p>
+          <strong> Approve Artifact </strong> Adminul acceptă artefactele introduse de către client prin formular și le introduce în baza de date.
+        </p>
+        <p>
+          <strong> Reject Artifact </strong> Adminul respinge artefactele ce conțin informații nepotrivite, incomplete, irelevante.
+        </p>
+        <p>
+          <strong> Import Artifact(Add Artifact) </strong> Adminul adaugă în baza de date artefactele introduse de utilizatori. De asemenea poate adăuga artefacte proprii.
+        </p>
+        <p>
+          <strong> Export Artifact </strong> Adminul face export informațiilor din baza de date atunci când un client solicită detalii despre un anumit artefact.
+        </p>
+        <p>
+          <strong> View Artifacts </strong> Adminul poate vizualiza informații despre artefactele existente în baza de date.
+        </p> 
+         <p>
+          <strong> View Statistics  </strong> Adminul poate vizualiza statisticile făcute în cadrul bazei de date.
+        </p> 
+         <p>
+          <strong> Edit Artifact </strong> Adminul poate edita informațiile despre toate artefactele aflte în baza de date.
+        </p>
+        <h3>2. Client </h3>
+          <p>
+          <strong> View Artifacts </strong> Clientul poate vizualiza detalii despre artefacte, le poate sorta și filtra după anumite criterii , de asemenea poate căuta în pagină un anumit artefact.
+        </p>
+          <p>
+          <strong>View Statistics </strong> Clientul poate solicita statistici ale artefactelor din baza de date.
+        </p>
+          <p>
+          <strong> Add Artifact </strong> Cleintul poate adăuga artefacte, completând un formular.
+        </p>
+          <p>
+          <strong> Edit Artifact </strong> Clientul poate modifica informațiile despre artefactele pe care le-a introdus și care se afla pe pagina lui de profil,  cu unele mai actualizate, retrimițând formularul.
+        </p>
+        <h3>3. Guest </h3>
+          <p>
+          <strong> Create account </strong>Acest tip de  utilizator poate sa isi creeze un cont.
+        </p>
+
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="DB">
+        <h2>Schema bazei de date</h2>
+
+        <figure typeof="sa:Image">
+            <img src="images/diagrama_bazei_de_date-page-3.png" alt="DB">
+            <figcaption>DB schema</figcaption>
+        </figure>
+
+        <p><strong> 1. Tabelul ARTIFACTS</strong></p>
+        <p>
+            In acest tabel vor fi stocate informatiile despre fiecare artefact. Fiecare item va avea ca foreign key id-ul utilizatorului corespunzător. Astfel vom putea selecta toate artefactele unui anumit utilizator (pentru pagina de profil). 
+        </p>
+
+        <p><strong> 2. Tabelul USERS</strong></p>
+        <p>
+          Așa cum reiese din numele tabelului, USERS va conține informații despre utilizatorii aplicației. Acest tabel va fi folosit, în principal pentru autentificare (login).
+          <figure typeof="schema:SoftwareSourceCode" class="custom-figure">
+              <pre property="schema:programmingLanguage" typeof="schema:Language" class="language-php">
+                  <code class="language-php">
+                      <span class="line"><span class="variable">SELECT</span> from <span class="parameter">'users'</span>
+                      <span class="line">WHERE <span class="parameter">'email'</span> = <span class="parameter">'email@email.com'</span></span>
+                      <span class="line">AND<span class="parameter">'username'</span> = <span class="parameter">'user'</span></span>
+                  </code>
+              </pre>
+          </figure>
+        </p>
+    </section>
+      <section typeof="sa:MaterialsAndMethods" id="diagrama-arhitecturala">
+        <h2>Diagrama arhitecturala</h2>
+        <figure typeof = "sa:Image">
+            <img src="images/diagrama_bazei_de_date-page-2.png" alt="arhitecturala">
+            <figcaption> Diagrama arhitecturala </figcaption>
+        </figure>  
+      </section>
+	  
+	   <section typeof="sa:MaterialsAndMethods" id="diagrama-arhitecturala">
+		<h2>Diagrama module</h2>
+		<figure typeof = "sa:Image">
+            <img src="images/Diagrama_module.png" alt="module">
+            <figcaption> Diagrama module </figcaption>
+		</figure> 
+	  </section>
+	  
+      <section typeof="sa:DevelopmentStages" id="stages">
+        <h2>Etape de dezvoltare</h2>
+        <p>
+          Aplicatia noastra web va fi dezvoltata in urmatoarele etape:
+        </p>
+        <ol>
+        	<li>Construirea partii de front-end, pe baza designului prezentat mai sus;</li>
+        	<li>Construirea logicii bazei de date, cu optimizarile necesare pentru o functionare cat mai rapida;</li>
+        	<li>Implementarea pe partea de server</li>
+        	<li>Testarea aplicatiei.</li>
+        </ol>
+        <p>
+        	Bineinteles ca aceste etape se pot desfasura si concomitent, nu numai secvential.
+        </p>
+        <h3>
+        	Impartirea task-urilor
+        </h3>
+        <dl>
+        	<dt> <strong>Botez Serban Mihai</strong> </dt>
+        	<dd>Pagina Login: Verificarea dacă un utilizator se logheză cu datele corecte contului lui din baza de date;</dd>
+          <dd>Pagina Create Account : Introducerea în baza de date a unui cont creat de utilizator(cât timp respecta regulile stabilite in formular);</dd>
+          <dd>Pagina Change Password :  Schimbarea parolei unui utilizator, dupa ce și-a introdus datele contului.</dd>
+          <dd>Logout/Sesiunea de logare : Instanțierea unei sesiune, blocarea accesarii paginilor daca utiliztorul nu e logat, ștergerea sesiunii la Logout;</dd>
+
+        	<dt><strong>Bîrsanu Gabriela</strong></dt>
+        	<dd>Pagina Artifacts: </dd>
+          <dd>-crearea si stilizarea paginii</dd>
+          <dd>Search: </dd>
+          <dd>-cautare dupa numele artefactelor </dd>
+          <dd>-afisarea artefactelor dorite</dd>
+          <dd>Filtrare:</dd>
+          <dd>-filtrare se face in functie de an, proprietar sau proprietar/muzeul in care se gaseste in prezent </dd>
+          <dd>-afisarea artefactelor dorite</dd>
+          <dd>Daca filtrarea nu are loc pe niciunul din alegerile existente sau input ul search-ului este null, vor fi afisate toate artefactele existente in baza de date. De asemenea acesta este continutul initial al paginii, inainte ca utilizatorul sa opteze pentru search/filtrare.</dd>
+          <dd>Import/Export XML, Integrarea formatelor CSV, JSON, XML</dd>
+          <dd>Import XML: </dd>
+          <dd>-in functie de optiunile de export adminul decide ce categorii de artefacte sa exporte</dd>
+          <dd>-preluare din baza de date a criteriilor cu SampleXML</dd>
+          <dd>-salvarea fisierului</dd>
+          <dd>Export XML: </dd>
+          <dd>-preluarea tagurilor din fisier</dd>
+          <dd>-validarea inputurilor cu expresii regulate</dd>
+          <dd>-introducerea in baza de date a artefactelor</dd>
+          
+
+        	<dt><strong>Coteț Andreea Roxana</strong></dt>
+        	<dd>Pagina de statistici:</dd>
+          <dd>-oferirea unor statistici despre anumite informaiti</dd>
+          <dd>Admin:</dd>
+          <dd>-creearea și stilizarea paginii</dd>
+          <dd>preluarea și afisarea artefactelor care au dot trimise de catre ceilalti utilizatori</dd>
+          <dd>-acceptarea sau respingerea artefactelor</dd>
+          <dd>-importarea în format csv și json</dd> 
+
+        	<dt><strong>Purice Maria-Alexandra</strong></dt>
+        	<dd>Pagina de descriere </dd>
+          <dd>crearea si stilizarea paginii descriptive (responsive) </dd>
+          <dd>preluarea datelor si afisarea lor in pagina</dd>
+          <dd>Formular:</dd>
+          <dd>-crearea si stilizarea formularului de adaugare / editare a unui artefact (responsive) </dd>
+          <dd>-functionalitatea de update a unui artefact </dd>
+          <dd>-upload-ul de imagine</dd>
+          <dd>Profile.php </dd> 
+          <dd>-crearea si stilizarea paginii pentru un utilizator inregistrat (responsive)</dd>
+          <dd> -preluarea si afisarea artefactelor introduse de utilizatorul logat</dd> 
+          <dd>-legatura cu formularul de add / edit prin intermediul link-urilor din pagina  </dd>
+          <dd>Export.php </dd>
+          <dd>-formularul de export (schelet HTML, fare stilizare) </dd>
+          <dd>-preluarea de date in functie de criteriile selectate in formular</dd>
+          <dd>-conversia datelor in formatul ales (csv, json) </dd>
+          <dd>-descarcarea fisierului</dd>
+        </dl>
+      </section>
+      <section typeof="sa:Conclusion" id="conclusion">
+        <h2>Concluzie</h2>
+        <p>
+          	În concluzie, aplicația este folosită pentru gestionarea artefactelor în funcție de preferințe, care ofera date statistice ale acestora
+        </p>
+        <p>
+        	Pe viitor vom putea adauga noi feature-uri aplicatiei noastre, care sa imbunatateasca si mai mult experienta utilizatorilor. Aceste feature-uri ar putea fi un sistem de mesaje intre utilizatori si admin, o sortare a artefactelor sau optiunea de editare profil.
+        </p>
+      </section>
+      <section typeof="sa:ReferenceList" id="references">
+        <h2>Bibliografie</h2>
+        <dl>
+            <dd typeof="schema:ScholarlyArticle" resource="https://www.w3schools.com/">
+                <a href="https://www.w3schools.com/">
+                    https://www.w3schools.com/
+                </a>
+            </dd>
+            <dd typeof="schema:ScholarlyArticle" resource="http://php.net/">
+                <a href="http://php.net/">
+                    hhttp://php.net/
+                </a>
+            </dd>
+            <dd typeof="schema:ScholarlyArticle" resource="https://pxhere.com/">
+                <a href="https://pxhere.com/">
+                    https://www.w3schools.com/
+                </a>
+            </dd>
+            <dd typeof="schema:ScholarlyArticle" resource="https://www.tutorialrepublic.com/">
+                <a href="https://www.tutorialrepublic.com/">
+                    https://www.tutorialrepublic.com/
+                </a>
+            </dd>
+            <dd typeof="schema:ScholarlyArticle" resource="https://stackoverflow.com/">
+                <a href="https://stackoverflow.com/">
+                    https://stackoverflow.com/
+                </a>
+            </dd>
+            <dd typeof="schema:ScholarlyArticle" resource="http://paletton.com/">
+                <a href="http://paletton.com/">
+                    http://paletton.com/
+                </a>
+            </dd>
+        </dl>
+      </section>
+    </article>
+  </body>
+</html>
