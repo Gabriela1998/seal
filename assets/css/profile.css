@@ -9,7 +9,7 @@
 }
 #profile-avatar {
     border-radius: 50%;
-    width: 200px;
+    width: 20vw;
     display: block;
     margin: 20px auto 20px auto;
     border: 4px dashed #ffdc00;
@@ -24,6 +24,17 @@
 	align-items: center;
   	margin:20px auto;
   	border: 2px dashed #ffdc00;
+}
+@media screen and (max-width: 750px) {
+	#profile-info{
+		grid-template-columns: auto;
+	}
+	#profile{
+		margin:0;
+	}
+	#parallax-header{
+		height: 40vw;
+	}
 }
 
 #profile-info div, button{

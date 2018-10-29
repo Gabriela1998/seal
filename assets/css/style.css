@@ -60,7 +60,7 @@ body, html {
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   #logo{
     width: 20vh;
       left: 20px;
@@ -71,10 +71,12 @@ body, html {
 #intro
 {
   font-family: 'Raleway', sans-serif;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
   font-stretch: extra-expanded;
-  font-size: 20px;
   letter-spacing: 0.03rem;
   text-align: center;
   z-index: 1;
@@ -83,11 +85,26 @@ body, html {
   height: 10em;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: #ffdc00;
   position: absolute; /*fixed for the intro to stay behind*/
 }
-
+@media screen and (max-width: 750px) {
+  #intro{
+    font-size: 5vw;
+  }
+}
+.descriere
+{
+  margin:0 100px;
+}
+@media screen and (max-width: 550px) {
+  .descriere{
+    margin:0;
+  }
+  p{
+    font-size: 2vw;
+  }
+}
 
 .topnav {
   margin: 0;
@@ -155,8 +172,8 @@ body, html {
     float:right;
     padding-right: 77px;
     position: fixed;
-  top:0; /*sticky navigation bar */
-  z-index: 2;
+    top:0; /*sticky navigation bar */
+    z-index: 2;
 
   }
   .topnav.responsive .icon {
@@ -176,8 +193,6 @@ body, html {
   background-color: white;/*#fdffce*/
   display: inline-block;
   z-index: 2;
-  margin-left: 10vw;
-  margin-bottom: 100vh;
 }
 
 
@@ -187,12 +202,6 @@ body, html {
     }
 }
 
-
-
-.descriere
-{
-  margin:0 100px;
-}
 h1
 {
   width: 150px;
@@ -208,15 +217,13 @@ div .par, h1
   height: 100%;
   margin:0;
 
-
 }
+
 div .par
 {
-  margin-left:200px;
   font-stretch: extra-expanded;
-  font-size: 20px;
   letter-spacing: 0.03rem;
-
+  font-size: 20px;
 }
 div .l
 {
@@ -235,7 +242,14 @@ div .r
 {
   height: 20%;
 }
-
+@media screen and (max-width: 500px) {
+    div .par{
+      font-size: 4vw;
+    }
+    div h1{
+      font-size: 7vw;
+    }
+}
 
 
 
