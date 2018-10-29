@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/news.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+
+    <div class="parallax">
+        <div id="intro">
+          Icing topping danish pudding macaroon oat cake.
+        </div>
+        <img id="logo" src="assets/img/logo_transparent.png">
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active">HOME</a>
+          <a href="#news">NEWS</a>
+          <a href="#contact">ALERTS</a>
+          <a href="#about">PROFILE</a>
+          <a href="#about">LOGOUT</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </div>
+
+    <div class="parallax2">
+
+      <div class="alert-list">
+
+        <div class="alert">
+          <div class="mini-title">
+            <h2>alert1</h2>
+          </div>
+          <div class="content">
+            <p>conteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeent</p>
+          </div>
+        </div>
+
+        <div class="alert">
+          <div class="mini-title">
+            <h2>alert2</h2>
+          </div>
+          <div class="content">
+            <p>conteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeent</p>
+          </div>
+        </div>
+
+        <div class="alert">
+          <div class="mini-title">
+            <h2>alert3</h2>
+          </div>
+          <div class="content">
+            <p>conteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeent</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
