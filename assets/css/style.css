@@ -6,7 +6,17 @@ body, html {
     height: 100%;
 }
 
-
+.header{
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1));
+    position: fixed;
+    top: 0;
+    z-index:1;
+    height: 18vh;
+    width: 98vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .parallax {
     /* The image used */
@@ -24,12 +34,14 @@ body, html {
 
 #logo
 {
+
   width: 40vh;
   position: fixed;
   top:0;
   z-index: 2;
   left: 20px;
   top: -70px;
+
 }
 
 @media screen and (max-width: 450px) {
@@ -49,7 +61,7 @@ body, html {
   font-size: 20px;
   letter-spacing: 0.03rem;
   text-align: center;
-  z-index: 0;
+  z-index: 1;
 
   font-size: 50px;
   height: 10em;
@@ -57,7 +69,7 @@ body, html {
   align-items: center;
   justify-content: center;
   color: #ffdc00;
-  position: fixed;
+  position: absolute; /*fixed for the intro to stay behind*/
 }
 
 
@@ -126,24 +138,30 @@ body, html {
     text-align: center;
     float:right;
     padding-right: 77px;
+    position: fixed;
+  top:0; /*sticky navigation bar */
+  z-index: 2;
+
   }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+
   }
   .topnav.responsive a {
     float: none;
     display: block;
+    background-color: rgb(0, 0, 0, 0.5);
   }
 }
 
-.home-content{
-  background-color: #fdffce;
-  position: absolute;
+.descriere{
+  background-color: white;/*#fdffce*/
+  display: inline-block;
   z-index: 2;
-  width: 80vw;
   margin-left: 10vw;
+  margin-bottom: 100vh;
 }
 
 
@@ -151,4 +169,89 @@ body, html {
     .parallax {
         background-attachment: scroll;
     }
+}
+
+
+
+.descriere
+{
+  margin:0 100px;
+}
+h1
+{
+  width: 150px;
+  padding: 0;
+}
+
+div .par, h1
+{
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  color: #850018;
+  height: 100%;
+  margin:0;
+
+
+}
+div .par
+{
+  margin-left:200px;
+  font-stretch: extra-expanded;
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+
+}
+div .l
+{
+  float:left;
+}
+div .r
+{
+    overflow: auto;
+}
+.container
+{
+  width:100%;
+  padding:0;
+}
+.l, .r
+{
+  height: 20%;
+}
+
+
+
+
+footer
+{
+  width: 100%;
+  height:20vh;
+  border-top: 1px solid #ffdc00;
+  padding-top: 10vh;
+  display: inline-block;
+}
+#footer
+{
+   height:31vh;
+   bottom:0;
+}
+footer .footer-element 
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  color:yellow;
+}
+.footer-element
+{
+  float:left;
+  width:33%;
+}
+@media screen and (max-width: 800px) {
+  .footer-element {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+
 }
