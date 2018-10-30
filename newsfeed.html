@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css" >
-<link rel="stylesheet" href="assets/css/alerts.css">
-<link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>SEAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+  <link rel="stylesheet" href="assets/css/alerts.css">
+  <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 </head>
-<body>
+<body class="news-page">
 <script>
 function showMoreAlert(id) {
     var alert = document.getElementById("alert"+id);
-    var button = document.getElementById("showMoreAlert");
+    var button = document.getElementById("showMoreAlert"+id);
     if(alert.className == "alert less"){
       alert.className = "alert more";
       button.innerText = "Show less";
@@ -30,33 +32,63 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+
+
+
+
 </script>
   <div class="parallax">
-      <div id="intro">
-        Icing topping danish pudding macaroon oat cake.
+          <div id="intro">
+            Icing topping danish pudding macaroon oat cake.
+          </div>
+          <div class="header">
+            <img id="logo" src="assets/img/logo_transparent.png" alt="logo">
+            <div class="topnav" id="myTopnav">
+              <a class="home-page" href="index.html">HOME</a>
+              <a class="news-page" href="newsfeed.html">NEWS</a>
+              <a class="profile-page" href="profile.html">PROFILE</a>
+              <a href="login.html">LOGOUT</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
       </div>
-      <div class="header">
-        <img id="logo" src="assets/img/logo_transparent.png">
-        <div class="topnav" id="myTopnav">
-          <a href="#home" class="active">HOME</a>
-          <a href="#news">NEWS</a>
-          <a href="#contact">ALERTS</a>
-          <a href="#about">PROFILE</a>
-          <a href="#about">LOGOUT</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-      </div>
-  </div>
-
   <div class="descrieere" style="z-index: 3;">
+    
+    <div id="notification">
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn" class="edit-button">Notification</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Notification Title</h2>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the Not Body</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="modal-footer">
+            <h3>Notification footer</h3>
+          </div>
+        </div> 
+
+      </div>
+    </div>
+
+
     <div class="alert-list">
       <div id="alert1" class="alert less">
         <div class="title">
           <h1 style="width: auto; color: black;">Do You Have Winter Allergies?</h1>
         </div>
-        <button onclick="showMoreAlert(1)" id="showMoreAlert" class="edit-button">Show more</button>
+        <button onclick="showMoreAlert(1)" id="showMoreAlert1" class="edit-button">Show more</button>
         <div class="topic">
           <div class="mini-title">
             <h2>Intro</h2>
@@ -107,7 +139,7 @@ function myFunction() {
         <div class="title">
           <h1 style="width: auto; color: black;">Do You Have Winter Allergies?</h1>
         </div>
-        <button onclick="showMoreAlert(2)" id="showMoreAlert" class="edit-button">Show more</button>
+        <button onclick="showMoreAlert(2)" id="showMoreAlert2" class="edit-button">Show more</button>
         <div class="topic">
           <div class="mini-title">
             <h2>Intro</h2>
@@ -118,7 +150,9 @@ function myFunction() {
               as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.</p>
           </div>
         </div>
+        
         <hr class="for-alert-list">
+
         <div class="topic">
           <div class="mini-title">
             <h2>Causes</h2>
@@ -169,6 +203,34 @@ function myFunction() {
         <p class="footer-element"> @2018 Seal</p>
   </footer>
 </div>
+
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>

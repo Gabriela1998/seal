@@ -66,12 +66,24 @@ form {
   border:2px solid #ffdc00;
 }
 
+
+
 .logo-container {
   /*EASTER EGG margin-left: calc(70% - 200px); */
   height: 200px;
   display: grid;
-  grid-template:" . img .";
+  grid-template-areas:"nothing1 img nothing2";
   grid-template-columns: auto 200px auto;
+}
+
+.nothing1 {
+  display: inline-grid;
+  grid-area: nothing1;
+}
+
+.nothing2 {
+  display: inline-grid;
+  grid-area: nothing2;
 }
 
 .logo-container img {
