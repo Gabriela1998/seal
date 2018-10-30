@@ -60,12 +60,9 @@ button:hover {
 }
 
 form {
-  /* max-height: 30%; */
-  /* background-color: #C0C0C0; */
   margin-left: 35%;
   margin-right: 35%;
   margin-top: 10px;
-  /* margin-bottom: 15%; */
   border:2px solid #ffdc00;
 }
 

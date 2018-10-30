@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <script type="text/javascript">
+    <script>
       function transformLogin() {
         var form = document.getElementById("login");
         var div = document.getElementById("inCaseOfRegister");
@@ -35,10 +35,10 @@
         <h2 id="TITLE">Login</h2>
         <hr>
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Your email here" name="email" required>
+        <input id="email" type="text" placeholder="Your email here" name="email" required>
 
         <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" required>
 
         <div id="inCaseOfRegister">
 
