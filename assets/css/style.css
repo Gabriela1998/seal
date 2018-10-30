@@ -140,7 +140,9 @@ body, html {
 
 .topnav a:hover,
 body.home-page a.home-page,
-body.profile-page a.profile-page {
+body.profile-page a.profile-page,
+body.news-page a.news-page
+ {
   cursor: pointer;
   color: #ffdc00;
   border: 2px #ffdc00 solid;
