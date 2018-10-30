@@ -182,8 +182,3 @@ hr {
 .edit-button:hover {
 	border:2px dashed #000000;
 }
-
-.alert-title {
-  width: auto;
-  color: black;
-}
