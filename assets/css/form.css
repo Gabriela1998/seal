@@ -145,8 +145,8 @@ h2 {
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 400px) {
   form {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
   }
 

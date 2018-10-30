@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Seal scholarly</title>
     <link rel="stylesheet" href="scholarly.css">
+    <!-- <link rel="stylesheet" href="custom_style.css"> -->
   </head>
   <body>
     <article resource="#" typeof="schema:ScholarlyArticle">
@@ -31,9 +32,6 @@
                 <a href="mailto:birsanu.gabriela@gmail.com"
                 property="schema:email">birsanu.gabriela@gmail.com</a>
               </li>
-              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                <a href="fax:+4815162342" property="schema:faxNumber">fake fax number</a>
-              </li>
             </ul>
           </li>
 
@@ -50,9 +48,7 @@
                 <a href="mailto:marian.m177@yahoo.com"
                 property="schema:email">marian.m177@yahoo.com</a>
               </li>
-              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
-                <a href="fax:+4815162342" property="schema:faxNumber">fake fax number</a>
-              </li>
+
             </ul>
           </li>
         </ul>
@@ -83,7 +79,7 @@
       </section>
 
       <section>
-        <h2>Ideas and concepts</h2>
+        <h2>Concepts</h2>
         <section>
           <h3>HTML</h3>
           <ul>
@@ -271,23 +267,118 @@
         </section>
       </section>
 
-      <section>
+      <section typeof="sa:MaterialsAndMethods">
         <h2>Our implementation using these concepts</h2>
         <ul>
-          <div class="multimedia-example">
-            <div class="item">
-              <img src="smiley.gif" alt="Smiley face">
-            </div>
-            <div class="item">
-              <img src="smiley.gif" alt="Smiley face">
-            </div>
-            <div class="item">
-              <img src="smiley.gif" alt="Smiley face">
-            </div>
-            <div class="item">
-              <img src="smiley.gif" alt="Smiley face">
-            </div>
-          </div>
+          <li>
+            <h3>First steps</h3>
+            <ul>
+              <li>
+                Down here you can see 2 sketches we made before starting to work.
+              </li>
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/sketch.jpg" alt="sketch">
+                  <figcaption> Sketch for how the alerts should be previewed </figcaption>
+              </figure>
+
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/another_sketch.jpg" alt="another_sketch">
+                  <figcaption> Sketch for home page </figcaption>
+              </figure>
+            </ul>
+          </li>
+          <li>
+            <h3>After we agreed on some ideas about how the project should look like</h3>
+            <ul>
+              <li>
+                <p>Here we have pictures with the tasks we agreed for this project</p></li>
+                <p>As you can see we have 4 lists: Tasks, Sub-tasks, In work and Done. Each list contains cards and while In work or Done sub-tasks should be kept right under their respective parent task.</p>
+              </li>
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/trello-init.jpg" alt="trello-init">
+                  <figcaption> Trello before we started working</figcaption>
+              </figure>
+
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/trello-middle.jpg" alt="trello-init">
+                  <figcaption> Trello while we working</figcaption>
+              </figure>
+
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/trello-final.jpg" alt="trello-init">
+                  <figcaption> Trello after we were finished, here you can see that we mark who finished the task/sub task. And we added another list "Garbage" for tasks that can't be done now or just don't make sense</figcaption>
+              </figure>
+
+            </ul>
+          </li>
+          <li>
+            <h3>For code management we chose Git and the tool we used GitHub</h3>
+            <ul>
+              <li>
+                <p>Each of us made a branch to work on, and occasionally or if it was requested we had to merge with master but only working solutions</p>
+                <p>Testing each other's work we found bugs and reported them in GitHub->Issues</p>
+              </li>
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/git-branches.png" alt="git-branches">
+                  <figcaption>Three branches, one for each member and master</figcaption>
+              </figure>
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/git-issue.png" alt="git-issue">
+                  <figcaption>Example of issue with linked commit</figcaption>
+              </figure>
+              <figure typeof = "sa:Image">
+                  <img src="for_progress/git-overall.png" alt="git-overall">
+                  <figcaption>Repository after we were finished</figcaption>
+              </figure>
+            </ul>
+          </li>
+
+          <li>
+            <h3>Now some sneaky peaks inside our code</h3>
+            <figure typeof = "sa:Image">
+                <img src="for_progress/html-example.png" alt="html-example">
+                <figcaption>Index page only with navigator menu</figcaption>
+            </figure>
+            <figure typeof = "sa:Image">
+                <img src="for_progress/css-responsive-example.png" alt="css-responsive-example">
+                <figcaption>Here is the css responsible with the responsiveness of the navigator</figcaption>
+            </figure>
+            <figure typeof = "sa:Image">
+                <img src="for_progress/javascript-example.png" alt="javascript-example">
+                <figcaption>And the javascript function wich transforms the navigator into a dropdown on small screens</figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <h3>Final product</h3>
+            <p>Users will be able to login/register with or without facebook(quick method).</p>
+            <p>And the ultimate goal for this project is to develop an application that sends real time alerts/notifications about common/uncommon allergies.</p>
+            <p>All medical informations will be extracted from Webmd.com</p>
+            <figure typeof = "sa:Image">
+                <img src="for_progress/login.png" alt="login-example">
+                <figcaption>Login page</figcaption>
+            </figure>
+
+            <figure typeof = "sa:Image">
+                <img src="for_progress/index.png" alt="index-example">
+                <figcaption>Home page</figcaption>
+            </figure>
+
+            <figure typeof = "sa:Image">
+                <img src="for_progress/news-1.png" alt="news-example">
+                <figcaption>Newsfeed page(all alerts/notifications prioritized different for every user)</figcaption>
+            </figure>
+
+            <figure typeof = "sa:Image">
+                <img src="for_progress/profile.png" alt="profile-example">
+                <figcaption>Profile page where they can edit info</figcaption>
+            </figure>
+
+            <figure typeof = "sa:Image">
+                <img src="for_progress/footer-from-profile.png" alt="footer-from-profile-example">
+                <figcaption>Footer visible in every page</figcaption>
+            </figure>
+          </li>
         </ul>
       </section>
     </article>
