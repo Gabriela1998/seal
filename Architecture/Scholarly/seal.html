@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seal scholarly</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <!-- <link rel="stylesheet" href="custom_style.css"> -->
+  </head>
+  <body>
+    <article resource="#" typeof="schema:ScholarlyArticle">
+      <header>
+        <h1 property="schema:name">SE.AL.</h1>
+        <p role="doc-subtitle" property="schema:alternateName">
+          Seasonal allergy web notifier
+        </p>
+      </header>
+      <meta property="schema:accessibilityFeature" content="alternativeText">
+
+      <section typeof="sa:AuthorsList">
+        <h2>Authors</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/gabriela.birsanu">
+              <meta property="schema:givenName" content="Gabriela">
+              <meta property="schema:familyName" content="Bîrsanu">
+              <span property="schema:name">Gabriela Bîrsanu</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:birsanu.gabriela@gmail.com"
+                property="schema:email">birsanu.gabriela@gmail.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/marian.morcotet.9">
+              <meta property="schema:givenName" content="Marian">
+              <meta property="schema:familyName" content="Morcotet">
+              <span property="schema:name">Marian Morcotet</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:marian.m177@yahoo.com"
+                property="schema:email">marian.m177@yahoo.com</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section typeof="sa:Affiliations">
+        <h2>Affiliations</h2>
+        <ul>
+          <li id="sa">
+            <span typeof="schema:Organization" resource="https://science.ai/">
+              <span property="schema:name">Faculty of computer science</span>,
+              <span property="schema:parentOrganization">
+                <span typeof="schema:Organization">
+                  <span property="schema:name">"Alexandru Ioan Cuza" University of Iași</span>
+                  —
+                  <span property="schema:location" typeof="schema:Place">
+                    <span property="schema:address" typeof="schema:PostalAddress">
+                      <span property="schema:addressLocality">Iași</span>,
+                      <span property="schema:addressRegion">Iași</span>,
+                      <span property="schema:addressCountry">România</span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+
+        <h2>Used APIs</h2>
+        <section>
+          <h3>Facebook SDK for JavaScript</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://developers.facebook.com/docs/facebook-login/web/">JavaScript SDK</a>
+                </cite> is an API that enables people to sign into a web application with their Facebook credentials. To implement Facebook login we will follow the steps:
+                <ul>
+                  <li> Enter Our Redirect URL to take people to your successful-login page.</li>
+
+                  <li>Check the login status to see if someone's already logged into your app. During this step, we will also check to see if someone has previously logged into our app, but is not currently logged in.</li>
+
+                  <li>Log people in, either with the login button or with the login dialog, and ask for a set of data permissions.</li>
+
+                  <li>Log people out to allow them to exit from our app. </li>
+                </ul>
+            </p>
+          </ul>
+        </section>
+
+
+        <section>
+          <h3>JS Store</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="http://jsstore.net/">JsStore</a>
+                </cite> is an API used to execute Database operation in browsers with JsStore. JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis. We will use it to store data from users.
+            </p>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Google Data Studio</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://datastudio.google.com">Data Studio</a>
+                </cite> is an API used to represent a wide variely of data. The Data Studio Explorer streamlines the editing, viewing and data visualization experience. We can apply filters quickly, export our explorations to new or existing reports. We can even access the Explorer from any report to start exploring the data without modifying your report. We will use this API for statistics about alerts and allergies.
+            </p>
+          </ul>
+        </section>
+
+
+        <section>
+          <h3>Diffbot</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://www.diffbot.com/products/crawlbot/">Diffbot</a>
+                </cite> is a crowlbot that extract data from entire sites. Features:
+                <ul>
+                  <li> <b>Smart Processing </b>: Automatically find and extract all article, product or other supported pages.</li>
+
+                  <li> <b>Structured Search </b>: All crawls are instantly searchable using Search API, allowing to slice and dice the data by searching the Diffbot-structured fields. Sort by article date, filter by product price, search across your custom fields: it's all in there.</li>
+
+                  <li> <b>Wolf-Spider Fast </b>: Distributed, world-class crawling infrastructure processing millions of pages daily.</li>
+
+                  <li> <b> Diversified IP Options </b>: We can utilize the reserved fleet of proxy IPs, optionally upgrade to gain access to tens of thousands of unique IPs for truly diversified crawling or region/country-specific extraction. </li>
+                </ul>
+            </p>
+          </ul>
+        </section>
+
+
+
+
+      </section>
+
+    </article>
+  </body>
+</html>
