@@ -215,11 +215,59 @@
 	                will be used to extract data from <a href="https://www.webmd.com/">Web MD</a> platform in order to have live information about allergies in the notification and allergy article.
 
 	            	</p>
-
-
-	            </li>
+              </li>
 	          </ul>
 	        </section>
+          <section>
+            <h2>Client side storage</h2>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                </cite>
+
+                <ul>
+                  <h4>JS Storage</h4>
+                  <li>JS Storage is a plugin that allow working with a database with JS. ex. Used for storing user infomations like cookies and namespace storage functionality.</li>
+                  <li>We chose JS Storage because it has many functionalities:
+                    <p>To store object easily, encode/decode it with JSON automatically</p>
+                    <p>Ability to define namespace and use it as a specific storage</p>
+                    <p>Magic getter and setter to have access at an infinite object level with one call</p>
+                    <p>Compatibility with all browsers</p>
+                  </li>
+                  <li>
+                    <h4>Using JS Storage</h4>
+                    <p>Initialization : storage=Storages.localStorage</p>
+                    <p>After initialization the storage object gives us a lot of functions that allows us to have a fully functional database:
+                      <ul>
+                        <li>storage.Get()- Get an item from a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Get.jpg" alt="sketch">
+                            <figcaption> Example of Get()</figcaption>
+                          </figure>
+                        </li>
+
+                        <li>storage.Set()- Set an item in a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Set.jpg" alt="sketch">
+                            <figcaption> Example of Set()</figcaption>
+                          </figure>
+                        </li>
+                        <li>storage.Keys()- Get keys of a storage or an item in a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Keys.jpg" alt="sketch">
+                            <figcaption> Example of Keys()</figcaption>
+                          </figure>
+                        </li>
+                        <li>storage.isEmpty()- Check if a storage or an item in a storage is empty (if equal to "", 0, null, undefined, [] or {}).
+                          <figure typeof = "sa:Image">
+                            <img src="isEmpty.jpg" alt="sketch">
+                            <figcaption> Example of isEmpty()</figcaption>
+                          </figure>
+                        </li>
+                        <li>And many more!</li>
+                      </ul>
+          </section>
 
         </section>
 
