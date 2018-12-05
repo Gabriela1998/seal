@@ -153,6 +153,79 @@
           </ul>
         </section>
 
+
+        <section>
+          <itemscope itemtype="http://schema.org/CreativeWork">
+          <h2><p itemprop="educationalUse">University project</p></h2>
+          <figure typeof = "sa:Image">
+              <img src="Capture.jpg" alt="news-example">
+              <figcaption>Picture of arhitecture</figcaption>
+          </figure>
+          <section>
+            <h3>Short explanation:</h3>
+            <p>Template means we have predefined html structures and View will fill those structures with data from Model.</p>
+            <p>Model is where all the pages store data, for this project we need a User model, Page model and Web MD model. User model uses API to fill with data that can then be used by the view. Page model is responsible for page related data ex:how many pages and what names to view in navbar. Web MD model uses API to fill with data about medical warnings and recommandations when the user wants.</p>
+            <p>Database for this will be IndexDB API and will be used to store data that we need outside of this session.</p>
+            <p>Events(click, drag, scroll) will change the model and of course the View(what the user sees).</p>
+          </section>
+        </section>
+
+	        <section>
+	        	<h2>Micro Data</h2>
+	        <ul><li>
+	        	<h3>Microdata HTML scheme</h3>
+
+	            <p typeof="schema:WebAPI" role="doc-biblioentry"
+	              resource="http://semver.org/"
+	              property="schema:citation" id="some-id">
+	                <cite property="schema:name">
+	                  <a href="https://schema.org/docs/gs.html">Schema.org</a>
+	                </cite>
+	                is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. <br> <br> Schema.org vocabulary can be used with many different encodings, including RDFa, Microdata and JSON-LD. These vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model. <br> <br>
+
+	                Most webmasters are familiar with HTML tags on their pages. Usually, HTML tags tell the browser how to display the information included in the tag. <br><br>
+
+	                By adding additional tags to the HTML of your web pages—tags that say, "Hey search engine, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata is a set of tags, introduced with HTML5, that allows you to do this.
+
+	                <figure typeof = "sa:Image">
+	                  <img src="for_progress/microdata-itemprop.png" alt="sketch">
+	                  <figcaption> Including microdata in HTML using itemprop </figcaption>
+              		</figure>
+
+              		We can also specify a time within a day, using the hh:mm or hh:mm:ss format. Times are prefixed with the letter T and can be provided along with a date, like this:
+
+              		<figure typeof = "sa:Image">
+	                  <img src="for_progress/microdata-2.png" alt="sketch">
+	                  <figcaption> Including microdata in HTML using itemprop </figcaption>
+              		</figure>
+
+
+	            </p></li>
+
+
+	            <li>
+
+	            	<h3>External Microdata</h3>
+	            	<p typeof="schema:WebAPI" role="doc-biblioentry"
+	              resource="http://semver.org/"
+	              property="schema:citation" id="some-id">
+	                <cite property="schema:name">
+	                  <a href="https://www.diffbot.com/products/crawlbot/">Diffbot API</a>
+	                </cite>
+	                will be used to extract data from <a href="https://www.webmd.com/">Web MD</a> platform in order to have live information about allergies in the notification and allergy article.
+
+	            	</p>
+
+
+	            </li>
+	          </ul>
+	        </section>
+
+        </section>
+
+
+
+
       </section>
 
     </article>
