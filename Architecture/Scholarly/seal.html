@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seal scholarly</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <!-- <link rel="stylesheet" href="custom_style.css"> -->
+  </head>
+  <body>
+    <article resource="#" typeof="schema:ScholarlyArticle">
+      <header>
+        <h1 property="schema:name">SE.AL.</h1>
+        <p role="doc-subtitle" property="schema:alternateName">
+          Seasonal allergy web notifier
+        </p>
+      </header>
+      <meta property="schema:accessibilityFeature" content="alternativeText">
+
+      <section typeof="sa:AuthorsList">
+        <h2>Authors</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/gabriela.birsanu">
+              <meta property="schema:givenName" content="Gabriela">
+              <meta property="schema:familyName" content="Bîrsanu">
+              <span property="schema:name">Gabriela Bîrsanu</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:birsanu.gabriela@gmail.com"
+                property="schema:email">birsanu.gabriela@gmail.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/marian.morcotet.9">
+              <meta property="schema:givenName" content="Marian">
+              <meta property="schema:familyName" content="Morcotet">
+              <span property="schema:name">Marian Morcotet</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:marian.m177@yahoo.com"
+                property="schema:email">marian.m177@yahoo.com</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section typeof="sa:Affiliations">
+        <h2>Affiliations</h2>
+        <ul>
+          <li id="sa">
+            <span typeof="schema:Organization" resource="https://science.ai/">
+              <span property="schema:name">Faculty of computer science</span>,
+              <span property="schema:parentOrganization">
+                <span typeof="schema:Organization">
+                  <span property="schema:name">"Alexandru Ioan Cuza" University of Iași</span>
+                  —
+                  <span property="schema:location" typeof="schema:Place">
+                    <span property="schema:address" typeof="schema:PostalAddress">
+                      <span property="schema:addressLocality">Iași</span>,
+                      <span property="schema:addressRegion">Iași</span>,
+                      <span property="schema:addressCountry">România</span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+
+        <h2>Used APIs</h2>
+        <section>
+          <h3>Facebook SDK for JavaScript</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://developers.facebook.com/docs/facebook-login/web/">JavaScript SDK</a>
+                </cite> is an API that enables people to sign into a web application with their Facebook credentials. To implement Facebook login we will follow the steps:
+                <ul>
+                  <li> Enter Our Redirect URL to take people to your successful-login page.</li>
+
+                  <li>Check the login status to see if someone's already logged into your app. During this step, we will also check to see if someone has previously logged into our app, but is not currently logged in.</li>
+
+                  <li>Log people in, either with the login button or with the login dialog, and ask for a set of data permissions.</li>
+
+                  <li>Log people out to allow them to exit from our app. </li>
+                </ul>
+            </p>
+          </ul>
+        </section>
+
+
+        <section>
+          <h3>JS Store</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="http://jsstore.net/">JsStore</a>
+                </cite> is an API used to execute Database operation in browsers with JsStore. JsStore is an IndexedDB Wrapper. It makes IndexedDB super easy with its SQL like apis. We will use it to store data from users.
+            </p>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Google Data Studio</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://datastudio.google.com">Data Studio</a>
+                </cite> is an API used to represent a wide variely of data. The Data Studio Explorer streamlines the editing, viewing and data visualization experience. We can apply filters quickly, export our explorations to new or existing reports. We can even access the Explorer from any report to start exploring the data without modifying your report. We will use this API for statistics about alerts and allergies.
+            </p>
+          </ul>
+        </section>
+
+
+        <section>
+          <h3>Diffbot</h3>
+          <ul>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                  <a href="https://www.diffbot.com/products/crawlbot/">Diffbot</a>
+                </cite> is a crowlbot that extract data from entire sites. Features:
+                <ul>
+                  <li> <b>Smart Processing </b>: Automatically find and extract all article, product or other supported pages.</li>
+
+                  <li> <b>Structured Search </b>: All crawls are instantly searchable using Search API, allowing to slice and dice the data by searching the Diffbot-structured fields. Sort by article date, filter by product price, search across your custom fields: it's all in there.</li>
+
+                  <li> <b>Wolf-Spider Fast </b>: Distributed, world-class crawling infrastructure processing millions of pages daily.</li>
+
+                  <li> <b> Diversified IP Options </b>: We can utilize the reserved fleet of proxy IPs, optionally upgrade to gain access to tens of thousands of unique IPs for truly diversified crawling or region/country-specific extraction. </li>
+                </ul>
+            </p>
+          </ul>
+        </section>
+
+
+        <section>
+          <itemscope itemtype="http://schema.org/CreativeWork">
+          <h2><p itemprop="educationalUse">University project</p></h2>
+          <figure typeof = "sa:Image">
+              <img src="Capture.jpg" alt="news-example">
+              <figcaption>Picture of arhitecture</figcaption>
+          </figure>
+          <section>
+            <h3>Short explanation:</h3>
+            <p>Template means we have predefined html structures and View will fill those structures with data from Model.</p>
+            <p>Model is where all the pages store data, for this project we need a User model, Page model and Web MD model. User model uses API to fill with data that can then be used by the view. Page model is responsible for page related data ex:how many pages and what names to view in navbar. Web MD model uses API to fill with data about medical warnings and recommandations when the user wants.</p>
+            <p>Database for this will be IndexDB API and will be used to store data that we need outside of this session.</p>
+            <p>Events(click, drag, scroll) will change the model and of course the View(what the user sees).</p>
+          </section>
+        </section>
+
+	        <section>
+	        	<h2>Micro Data</h2>
+	        <ul><li>
+	        	<h3>Microdata HTML scheme</h3>
+
+	            <p typeof="schema:WebAPI" role="doc-biblioentry"
+	              resource="http://semver.org/"
+	              property="schema:citation" id="some-id">
+	                <cite property="schema:name">
+	                  <a href="https://schema.org/docs/gs.html">Schema.org</a>
+	                </cite>
+	                is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. <br> <br> Schema.org vocabulary can be used with many different encodings, including RDFa, Microdata and JSON-LD. These vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model. <br> <br>
+
+	                Most webmasters are familiar with HTML tags on their pages. Usually, HTML tags tell the browser how to display the information included in the tag. <br><br>
+
+	                By adding additional tags to the HTML of your web pages—tags that say, "Hey search engine, this information describes this specific movie, or place, or person, or video"—you can help search engines and other applications better understand your content and display it in a useful, relevant way. Microdata is a set of tags, introduced with HTML5, that allows you to do this.
+
+	                <figure typeof = "sa:Image">
+	                  <img src="for_progress/microdata-itemprop.png" alt="sketch">
+	                  <figcaption> Including microdata in HTML using itemprop </figcaption>
+              		</figure>
+
+              		We can also specify a time within a day, using the hh:mm or hh:mm:ss format. Times are prefixed with the letter T and can be provided along with a date, like this:
+
+              		<figure typeof = "sa:Image">
+	                  <img src="for_progress/microdata-2.png" alt="sketch">
+	                  <figcaption> Including microdata in HTML using itemprop </figcaption>
+              		</figure>
+
+
+	            </p></li>
+
+
+	            <li>
+
+	            	<h3>External Microdata</h3>
+	            	<p typeof="schema:WebAPI" role="doc-biblioentry"
+	              resource="http://semver.org/"
+	              property="schema:citation" id="some-id">
+	                <cite property="schema:name">
+	                  <a href="https://www.diffbot.com/products/crawlbot/">Diffbot API</a>
+	                </cite>
+	                will be used to extract data from <a href="https://www.webmd.com/">Web MD</a> platform in order to have live information about allergies in the notification and allergy article.
+
+	            	</p>
+              </li>
+	          </ul>
+	        </section>
+          <section>
+            <h2>Client side storage</h2>
+            <p typeof="schema:WebAPI" role="doc-biblioentry"
+              resource="http://semver.org/"
+              property="schema:citation" id="some-id">
+                <cite property="schema:name">
+                </cite>
+
+                <ul>
+                  <h4>JS Storage</h4>
+                  <li>JS Storage is a plugin that allow working with a database with JS. ex. Used for storing user infomations like cookies and namespace storage functionality.</li>
+                  <li>We chose JS Storage because it has many functionalities:
+                    <p>To store object easily, encode/decode it with JSON automatically</p>
+                    <p>Ability to define namespace and use it as a specific storage</p>
+                    <p>Magic getter and setter to have access at an infinite object level with one call</p>
+                    <p>Compatibility with all browsers</p>
+                  </li>
+                  <li>
+                    <h4>Using JS Storage</h4>
+                    <p>Initialization : storage=Storages.localStorage</p>
+                    <p>After initialization the storage object gives us a lot of functions that allows us to have a fully functional database:
+                      <ul>
+                        <li>storage.Get()- Get an item from a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Get.jpg" alt="sketch">
+                            <figcaption> Example of Get()</figcaption>
+                          </figure>
+                        </li>
+
+                        <li>storage.Set()- Set an item in a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Set.jpg" alt="sketch">
+                            <figcaption> Example of Set()</figcaption>
+                          </figure>
+                        </li>
+                        <li>storage.Keys()- Get keys of a storage or an item in a storage.
+                          <figure typeof = "sa:Image">
+                            <img src="Keys.jpg" alt="sketch">
+                            <figcaption> Example of Keys()</figcaption>
+                          </figure>
+                        </li>
+                        <li>storage.isEmpty()- Check if a storage or an item in a storage is empty (if equal to "", 0, null, undefined, [] or {}).
+                          <figure typeof = "sa:Image">
+                            <img src="isEmpty.jpg" alt="sketch">
+                            <figcaption> Example of isEmpty()</figcaption>
+                          </figure>
+                        </li>
+                        <li>And many more!</li>
+                      </ul>
+          </section>
+
+        </section>
+
+
+
+
+      </section>
+
+    </article>
+  </body>
+</html>
