@@ -1,52 +1,86 @@
-function showMoreAlert(id) {
-    // var alert = document.getElementById("alert"+id);
-    // var button = document.getElementById("showMoreAlert"+id);
-    // if(alert.className == "alert less"){
-    //   alert.className = "alert more";
-    //   button.innerText = "Show less";
-    // } else {
-    //   alert.className = "alert less";
-    //   button.innerText = "Show more";
-    // }
-    console.log('works '+id);
+// function showMoreAlert(id) {
+//     // var alert = document.getElementById("alert"+id);
+//     // var button = document.getElementById("showMoreAlert"+id);
+//     // if(alert.className == "alert less"){
+//     //   alert.className = "alert more";
+//     //   button.innerText = "Show less";
+//     // } else {
+//     //   alert.className = "alert less";
+//     //   button.innerText = "Show more";
+//     // }
+//     console.log('works '+id);
+// }
+//
+//
+//
+// function buildAlertPreview(title, id){
+//   alertList = document.getElementsByClassName("alert-list");
+//
+//   alert = document.createElement("DIV");
+//   alert.id = 'alert'+id;
+//
+//   alertTitle = document.createElement("DIV");
+//   alertTitle.className = 'title';
+//
+//   titleContent = document.createElement("H1");
+//   titleContent.style = 'width: auto; color: black;';
+//   titleContent.textContent = title;
+//
+//   alertTitle.appendChild(titleContent);
+//
+//   alert.appendChild(alertTitle);
+//
+//   var button = document.createElement("BUTTON");
+//   button.onclick = "loadMore()";
+//   button.id = "showMoreAlert"+id;
+//   button.className = 'edit-button';
+//   button.textContent = 'Show more';
+//
+//   alert.appendChild(button);
+//
+//   console.log(alert);
+// }
+
+
+var alertaJSON = {'id' : 1,
+ 'title' : 'Do You Have Winter Allergies?',
+ 'topics' : [
+   'Intro', 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
+   'Causes', 'When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. Some common indoor allergy triggers are:Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.',
+   'Symptoms', 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
+   ] };
+
+alertaJSON = {
+  'id' : 1,
+  'title' : 'Do You Have Winter Allergies?',
+  'intro' : 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
+  'causes' : 'When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. Some common indoor allergy triggers are:<br>Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.<br>Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.',
+  'symptoms' : 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
 }
 
 
+alertToShow = localStorage.getItem(1);
+alertToShow = JSON.parse(alertToShow);
+console.log(alertToShow);
 
-function buildAlertPreview(title, id){
-  alertList = document.getElementsByClassName("alert-list");
+function fillAlertWithContent(json){
+  title = document.getElementById("title");
+  title.textContent = json.title;
 
-  alert = document.createElement("DIV");
-  alert.id = 'alert'+id;
+  intro = document.getElementById("intro-content");
+  intro.textContent = json.intro;
 
-  alertTitle = document.createElement("DIV");
-  alertTitle.className = 'title';
+  causes = document.getElementById("causes-content");
+  causes.textContent = json.causes;
 
-  titleContent = document.createElement("H1");
-  titleContent.style = 'width: auto; color: black;';
-  titleContent.textContent = title;
-
-  alertTitle.appendChild(titleContent);
-
-  alert.appendChild(alertTitle);
-
-  var button = document.createElement("BUTTON");
-  button.onclick = "loadMore()";
-  button.id = "showMoreAlert"+id;
-  button.className = 'edit-button';
-  button.textContent = 'Show more';
-
-  alert.appendChild(button);
-
-  console.log(alert);
+  symptoms = document.getElementById("symptoms-content");
+  symptoms.textContent = json.symptoms;
 }
 
+fillAlertWithContent(alertToShow);
+// console.log(JSON.stringify(alertaJSON));
 
-var alertaJSON = {'id' : 1, 'title' : 'Do You Have Winter Allergies?', 'topics' : ['Intro'
-, 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.'
-, 'Causes'] };
-
-// 
+//
 // var aleraaaJSON = {
 //   'id' : 1
 //   'title' : 'asd'
@@ -57,46 +91,46 @@ var alertaJSON = {'id' : 1, 'title' : 'Do You Have Winter Allergies?', 'topics' 
 //   }
 // }
 
-localStorage.setItem(1, JSON.stringify(alertaJSON));
-
-var parsedJSON = JSON.parse(localStorage.getItem(1));
-
-buildAlertPreview(parsedJSON.title, parsedJSON.id);
-
-function createAndAddTopic(topicTitle, topicContent){
-  var divTopic = document.createElement("DIV");
-  divTopic.calssName = 'topic';
-
-  var divMiniTitle = document.createElement("DIV");
-  divMiniTitle.className = 'mini-title';
-  var h2Title = document.createElement("H2");
-  h2Title.textContent = topicTitle;
-
-  divMiniTitle.appendChild(h2Title);
-
-  divTopic.appendChild(divMiniTitle);
-
-  var divContent = document.createElement("DIV");
-  divContent.className = 'content';
-  var divContentP = document.createElement("P");
-  divContentP.textContent = topicContent;
-
-  divContent.appendChild(divContentP);
-  divTopic.appendChild(divContent);
-
-  console.log(divTopic);
-}
-
-function loadFullAlert(id){
-  alert = document.getElementById("alert"+id);
-  fullContent = localStorage.getItem(id);
-  fullContent = JSON.parse(fullContent);
-
-  createAndAddTopic(fullContent.topics[0], fullContent.topics[1]);
-
-}
-
-loadFullAlert(1);
+// localStorage.setItem(1, JSON.stringify(alertaJSON));
+//
+// var parsedJSON = JSON.parse(localStorage.getItem(1));
+//
+// buildAlertPreview(parsedJSON.title, parsedJSON.id);
+//
+// function createAndAddTopic(topicTitle, topicContent){
+//   var divTopic = document.createElement("DIV");
+//   divTopic.calssName = 'topic';
+//
+//   var divMiniTitle = document.createElement("DIV");
+//   divMiniTitle.className = 'mini-title';
+//   var h2Title = document.createElement("H2");
+//   h2Title.textContent = topicTitle;
+//
+//   divMiniTitle.appendChild(h2Title);
+//
+//   divTopic.appendChild(divMiniTitle);
+//
+//   var divContent = document.createElement("DIV");
+//   divContent.className = 'content';
+//   var divContentP = document.createElement("P");
+//   divContentP.textContent = topicContent;
+//
+//   divContent.appendChild(divContentP);
+//   divTopic.appendChild(divContent);
+//
+//   console.log(divTopic);
+// }
+//
+// function loadFullAlert(id){
+//   alert = document.getElementById("alert"+id);
+//   fullContent = localStorage.getItem(id);
+//   fullContent = JSON.parse(fullContent);
+//
+//   createAndAddTopic(fullContent.topics[0], fullContent.topics[1]);
+//
+// }
+//
+// loadFullAlert(1);
 
 // <div id="alert1" class="alert less">
 //   <div class="title">

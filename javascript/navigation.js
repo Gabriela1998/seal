@@ -2,22 +2,21 @@
 // so no global variables are introduced.
 (function () {
 
-  const loadDynamicScript = (callback) => {
-  const existingScript = document.getElementById('scriptId');
-
-  if (!existingScript) {
-    const script = document.createElement('script');
-    script.src = 'url'; // URL for the third-party library being loaded.
-    script.id = 'libraryName'; // e.g., googleMaps or stripe
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (callback) callback();
-    };
+  function loadjscssfile(filename, filetype){
+      if (filetype=="js"){ //if filename is a external JavaScript file
+          var fileref=document.createElement('script')
+          fileref.setAttribute("type","text/javascript")
+          fileref.setAttribute("src", filename)
+      }
+      else if (filetype=="css"){ //if filename is an external CSS file
+          var fileref=document.createElement("link")
+          fileref.setAttribute("rel", "stylesheet")
+          fileref.setAttribute("type", "text/css")
+          fileref.setAttribute("href", filename)
+      }
+      if (typeof fileref!="undefined")
+          document.getElementsByTagName("head")[0].appendChild(fileref)
   }
-
-  if (existingScript && callback) callback();
-  };
 
   // Stores the cached partial HTML pages.
   // Keys correspond to fragment identifiers.
@@ -110,6 +109,7 @@
   // Navigate once to the initial fragment identifier.
   navigate();
 
+  loadjscssfile("javascript/buildAlert.js", "js");
   // Navigate whenever the fragment identifier value changes.
   window.addEventListener("hashchange", navigate)
 }());
