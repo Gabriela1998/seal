@@ -1,7 +1,9 @@
-function verificare(ceva){
-  // console.log(JSON.parse(ceva));
-  localStorage.setItem(1, ceva)
+function postResponse(response){
+  self.postMessage(response);
+  self.unregister();
 }
+
+
 
 function httpGetAsync(theUrl, callback)
 {
@@ -15,4 +17,4 @@ function httpGetAsync(theUrl, callback)
     xmlHttp.send(null);
 }
 
-httpGetAsync("http://127.0.0.1:8080/alerta.txt", verificare);
+httpGetAsync("http://127.0.0.1:8080/alerta.txt", postResponse);
