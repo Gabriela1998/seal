@@ -97,6 +97,7 @@
 
     // Toggle the "active" class on the link currently navigated to.
     setActiveLink(fragmentId);
+    loadjscssfile("javascript/buildAlert.js", "js");
   }
 
   // If no fragment identifier is provided,
@@ -109,7 +110,7 @@
   // Navigate once to the initial fragment identifier.
   navigate();
 
-  loadjscssfile("javascript/buildAlert.js", "js");
+
   // Navigate whenever the fragment identifier value changes.
   window.addEventListener("hashchange", navigate)
 }());
