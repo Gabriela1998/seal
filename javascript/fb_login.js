@@ -119,7 +119,7 @@
     });
 
  FB.Event.subscribe('auth.login', function () {
-          window.location = "http://localhost/seal/index.html";
+          window.location = "http://localhost/seal/";
       });
     // window.location.href="index.html";
   }
@@ -165,12 +165,12 @@ function logOut(){
   // user is now logged out
   });
    FB.Event.subscribe('auth.login', function () {
-          window.location = "http://localhost/seal/index.html";
+          window.location = "http://localhost/seal/";
       });
 }
 
 function redirect(){
-  window.location="http://localhost/seal/index.html";
+  window.location="http://localhost/seal/";
   // FB.Event.subscribe('auth.login', function(){
   //   window.location = "http://localhost/try/index.html#home";
   //   });

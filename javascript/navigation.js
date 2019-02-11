@@ -1,7 +1,6 @@
 // Wrap everything in an immediately invoked function expression,
 // so no global variables are introduced.
 (function () {
-
   function loadjscssfile(filename, filetype){
       if (filetype=="js"){ //if filename is a external JavaScript file
           var fileref=document.createElement('script')
@@ -17,7 +16,6 @@
       if (typeof fileref!="undefined")
           document.getElementsByTagName("head")[0].appendChild(fileref)
   }
-
   // Stores the cached partial HTML pages.
   // Keys correspond to fragment identifiers.
   // Values are the text content of each loaded partial HTML file.
@@ -99,6 +97,10 @@
     // }
     // Toggle the "active" class on the link currently navigated to.
     setActiveLink(fragmentId);
+
+    if(location.hash.substr(1)=="newsfeedd"){
+      loadjscssfile("javascript/buildAlert.js", "js");
+    }
 
   }
 

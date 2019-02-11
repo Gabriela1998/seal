@@ -60,8 +60,8 @@
 //
 //
 alertToShow = localStorage.getItem(1);
-// alertToShow = JSON.parse(alertToShow);
-// console.log(alertToShow);
+alertToShow = JSON.parse(alertToShow);
+console.log(alertToShow);
 
 function fillAlertWithContent(json){
   title = document.getElementById("title");
