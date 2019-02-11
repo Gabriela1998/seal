@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Arial" rel="stylesheet"> -->
+  <link rel="application/javascript" type="text/css" href="https://requirejs.org/docs/release/2.3.5/minified/require.js">
+
 </head>
 <body class="home-page">
 
@@ -20,14 +21,14 @@
           </div>
           <div class="header">
             <img id="logo" src="assets/img/logo_transparent.png" alt="logo">
-            <div class="topnav" id="myTopnav">
-              <a class="active" href="#home">HOME</a>
-              <a class="news-page" href="#newsfeedd">NEWS</a>
-              <a class="profile-page" href="#profile">PROFILE</a>
-              <a href="login.html">LOGOUT</a>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <div class="topnav responsive" id="myTopnav">
+              <a class="active nav-item" href="#home">HOME</a>
+              <a class="news-page nav-item" href="#newsfeed">NEWS</a>
+              <a class="profile-page nav-item" href="#profile" onclick="checkLoginStateProfile();">PROFILE</a>
+              <a class="nav-item"  onclick="logOut();" href="login.html">LOGOUT</a>
+              <!-- <a href="javascript:void(0);" class="icon" onclick="hamburger()">
                 <i class="fa fa-bars"></i>
-              </a>
+              </a> -->
             </div>
           </div>
       </div>
@@ -52,12 +53,19 @@
         </footer>
       </div>
 <script src="javascript/navigation.js" charset="utf-8"></script>
+
+<script src="javascript/responsiveMenu.js" charset="utf-8"></script>
+
+<script src="javascript/buildAlert.js" charset="utf-8"></script>
+
 <!-- <script src="javascript/responsiveMenu.js" charset="utf-8"></script> -->
 <!-- <script src="javascript/buildAlert.js" charset="utf-8"></script> -->
 <!-- <script src="javascript/testpythonserver.js" charset="utf-8"></script> -->
 <script src="javascript/webworker.js" charset="utf-8"></script>
 
+<script src="javascript/fb_login.js" charset="utf-8"></script>
 
+<script src="javascript/notification.js" charset="utf-8"></script>
 </body>
 
 </html>

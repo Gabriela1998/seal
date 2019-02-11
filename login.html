@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>SEAL</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <script src="javascript/fb_login.js"></script>
+    <script>
+      function transformLogin() {
+        var form = document.getElementById("login");
+        var div = document.getElementById("inCaseOfRegister");
+        var title = document.getElementById("TITLE");
+        var greenbtn = document.getElementByClass("greenbtn");
+        var quickbtn = document.getElementByClass("quickbtn");
+        form.action = "register.php";
+        div.innerText = '<label for="psw-repeat"><b>Repeat Password</b></label>';
+        div.innerText += '<input type="password" placeholder="Enter same password" name="psw-repeat" required>';
+        title.innerText = "Register";
+        greenbtn.innerText = "Sign up";
+        quickbtn.innerText = "Quick sign up";
+      }
+    </script>
+    <form id="login" action="login.php">
+      <div class="container">
+        <div class="logo-container">
+          <div class="nothing1"></div>
+          <img src="assets/img/logo_transparent.png" alt="logo">
+          <div class="nothing2"></div>
+        </div>
+
+        <h3 id="TITLE">Login and stuff to make you join us cuz we're amazing</h3>
+
+        <div class="clearfix">
+          <fb:login-button class="login-button" length="long" size="large" scope="public_profile,email" onload="redirect();checkLoginState();">
+              <span>Join us with Facebook</span>
+          </fb:login-button>
+        </div>
+
+      </div>
+    </form>
+  </body>
+</html>
