@@ -1,0 +1,165 @@
+body {
+  background-image: url('../img/flower_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-stretch: extra-expanded;
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+  font-family: 'Raleway', sans-serif;
+  color : white;
+}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 93%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #ffdc00;
+  margin-bottom: 15px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #ffdc00;
+  color: white;
+  padding: 14px 0px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+#TITLE{
+  margin: auto auto;
+  white-space: initial;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Extra styles for the cancel button */
+.clearfix{
+  margin:auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 0;
+}
+
+form {
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 10px;
+  border:2px solid #ffdc00;
+}
+
+body{
+  margin-top: 20vh;
+}
+
+.logo-container {
+  /*EASTER EGG margin-left: calc(70% - 200px); */
+  height: 200px;
+  display: grid;
+  grid-template-areas:"nothing1 img nothing2";
+  grid-template-columns: auto 200px auto;
+}
+
+.nothing1 {
+  display: inline-grid;
+  grid-area: nothing1;
+}
+
+.nothing2 {
+  display: inline-grid;
+  grid-area: nothing2;
+}
+
+.logo-container img {
+  height: 200px;
+  grid-area: img;
+}
+
+/* Add padding to container elements */
+.container {
+  max-height: 90%;
+  padding: 16px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.callJsFromLink {
+  color:#ffdc00;
+}
+
+h2 {
+  padding: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+  form {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .clearfix{
+    display: grid;
+    grid-template:
+    ". but1 ."
+    ". but2 .";
+    grid-template-columns: 20% 60% 20%;
+  }
+  .greenbtn, .quickbtn{
+    width: 100%;
+  }
+  .greenbtn {
+    grid-area: but1;
+  }
+  .quickbtn {
+    grid-area: but2;
+  }
+  form {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 400px) {
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  input[type=text], input[type=password] {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    margin-right: 5%;
+  }
+}

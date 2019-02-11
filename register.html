@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>SEAL</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arial" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/body.css"> -->
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="register.php" style="border:1px solid #ccc">
+      <div class="container">
+        <div class="logo-container">
+          <img src="assets/img/logo_transparent.png" alt="logo">
+        </div>
+        <h1>Register</h1>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input id="email" type="text" placeholder="Your email here" name="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input id="psw-repeat" type="password" placeholder="Enter same password" name="psw-repeat" required>
+
+        <hr>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+          <button type="button" class="greenbtn">Sign up</button>
+          <button type="submit" class="quickbtn">Quick sign up</button>
+        </div>
+      </div>
+    </form>
+    <div class="parallax"></div>
+  </body>
+</html>
