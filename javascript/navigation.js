@@ -94,10 +94,12 @@
     getContent(fragmentId, function (content) {
       contentDiv.innerHTML = content;
     });
-
+    // if (fragmentId == 'newsfeedd') {
+    //   loadjscssfile("javascript/buildAlert.js", "js");
+    // }
     // Toggle the "active" class on the link currently navigated to.
     setActiveLink(fragmentId);
-    loadjscssfile("javascript/buildAlert.js", "js");
+
   }
 
   // If no fragment identifier is provided,
