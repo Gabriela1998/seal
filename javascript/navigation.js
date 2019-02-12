@@ -100,6 +100,7 @@
 
     if(location.hash.substr(1)=="newsfeedd"){
       loadjscssfile("javascript/buildAlert.js", "js");
+      loadjscssfile("javascript/statistics.js", "js");
     }
 
   }

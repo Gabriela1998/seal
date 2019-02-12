@@ -64,21 +64,20 @@ alertaJSON = {
 alertaJSON = {
   'id' : 1,
   'title' : 'Do You Have Winter Allergies?',
-  'Intro' : 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
+  'intro' : 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
   'causes' : 'Causes are still unknown by biologists, it is a DNA mutation but the exact cause of it happening in the first place is unknown.',
   'symptoms' : 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
-  'severity' : 5,
-  'frequency' : {'interval' : 1, 'times' : 7},
-  'statistics' : {  'casesPerHundred' : 4, 'costsComparedToSalary' : 0, 'severeCasesPerHundred' : 20, 'shouldYouBeWorried' : 10},
+  'severity' : 1,
+  'frequency' : {'interval' : 1, 'times' : 1},
+  'statistics' : {  'casesPerHundred' : 15, 'costsComparedToSalary' : 15, 'severeCasesPerHundred' : 5, 'shouldYouBeWorried' : 6},
   'treatment' : 'There is no real treatment for this, except natural hidratant creams  wich just gets rid of the symptoms but not the problem'
 }
 // frequency.interval is in days , frequency.times is how many times to trigger the notification
 console.log(JSON.stringify(alertaJSON));
 //
 //
-alertToShow = localStorage.getItem("latestAlerts");
-alertToShow = JSON.parse(alertToShow);
-console.log(alertToShow);
+
+// console.log(alertToShow);
 
 function fillAlertWithContent(json){
   title = document.getElementById("title");
@@ -91,10 +90,16 @@ function fillAlertWithContent(json){
   causes.textContent = json.causes;
 
   symptoms = document.getElementById("symptoms-content");
-  symptoms.textContent = json.symptoms;
-}
+  symptoms.textContent = json.symptoms
 
+  treatment = document.getElementById("treatment-content");
+  treatment.textContent = json.treatment;
+}
+alertToShow = localStorage.getItem("latestAlert");
+alertToShow = JSON.parse(alertToShow);
 fillAlertWithContent(alertToShow);
+localStorage.setItem("shownAlert",JSON.stringify(alertToShow));
+// fillAlertWithContent(alertToShow);
 // console.log(JSON.stringify(alertaJSON));
 
 //
