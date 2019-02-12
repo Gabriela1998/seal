@@ -156,6 +156,36 @@
                 </figure>
               </p>
             <h3>Statistici</h3>
+              <p>
+                Statisticile sunt salvate in campul "statistics" din json-ul alerta si contin: Cate persoane din 100 au acea alergie,
+                Cate persoane din 100 au avut probleme grave din cauza alergiei si Cate persoane din 100 sunt neafectate.
+              </p>
+            <h3>Single Page Aplicattion</h3>
+              <p>
+                Aplicatia este implementata dupa modelul single page ce se bazeaza pe concepte foarte simple si anume: Nu se incarca aceeasi resursa de mai multe ori,
+                Navigarea de pe o pagina pe alta nu este prin redirectionare ci se adauga continutul in pagina curenta, dar aici apar complicatii, si anume: cand incarcam scripturile
+                sau stilurile ce au fost rezolvate cu o functie "loadcssjsfile" care incarca un fisier css sau js la cerere, iar continutul html este pe baza unor template-uri 
+                incarcate la fel in functie de "#pagina" din URL.
+
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/spa1.png" alt="spa">
+                  <figcaption> Single Page Aplication</figcaption>
+                </figure>
+              </p>
+              <h3>Workflow notificare</h3>
+              <p>
+                Aplicatia creeaza un worker care la un anume interval creeaza un request ajax la un server python simplu pentru fisierul "alerta.txt" ce contine o alerta in format JSON stringified daca aceasta este diferita fata ultima alerta stocata
+                in localStorage sub cheia "latestAlert" va trimite notificare.
+                O alerta poate avea o frecventa setata in campul "frequency". frequency.interval reprezinta o data la cate zile(in scopul demonstrarii o zi este de fapt 10secunde) iar frequency.times reprezinta de cate ori sa notifice acea alerta.
+                O alerta cu frequency este salvata in localStorage sub cheia "frqAlert" iar worker-ul verifica daca alerta stocata acolo indeplineste conditiile(interval satisface conditia si times > 1) si eventual notifica.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/spa2.png" alt="spa">
+                  <figcaption> Crearea alertei</figcaption>
+                </figure>
+              </p>
+
+
+
         </section>
 
 
