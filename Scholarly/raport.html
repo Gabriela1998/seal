@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seal scholarly</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <!-- <link rel="stylesheet" href="custom_style.css"> -->
+  </head>
+  <body>
+    <article resource="#" typeof="schema:ScholarlyArticle">
+      <header>
+        <h1 property="schema:name">SE.AL.</h1>
+        <p role="doc-subtitle" property="schema:alternateName">
+          Seasonal allergy web notifier
+        </p>
+      </header>
+      <meta property="schema:accessibilityFeature" content="alternativeText">
+
+      <section typeof="sa:AuthorsList">
+        <h2>Authors</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/gabriela.birsanu">
+              <meta property="schema:givenName" content="Gabriela">
+              <meta property="schema:familyName" content="Bîrsanu">
+              <span property="schema:name">Gabriela Bîrsanu</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:birsanu.gabriela@gmail.com"
+                property="schema:email">birsanu.gabriela@gmail.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person"
+              resource="https://www.facebook.com/marian.morcotet.9">
+              <meta property="schema:givenName" content="Marian">
+              <meta property="schema:familyName" content="Morcotet">
+              <span property="schema:name">Marian Morcotet</span>
+            </span>
+            <a href="#sf" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/bin/Main/">Student @Faculty of computer science</a>
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="mailto:marian.m177@yahoo.com"
+                property="schema:email">marian.m177@yahoo.com</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section typeof="sa:Affiliations">
+        <h2>Affiliations</h2>
+        <ul>
+          <li id="sa">
+            <span typeof="schema:Organization" resource="https://science.ai/">
+              <span property="schema:name">Faculty of computer science</span>,
+              <span property="schema:parentOrganization">
+                <span typeof="schema:Organization">
+                  <span property="schema:name">"Alexandru Ioan Cuza" University of Iași</span>
+                  —
+                  <span property="schema:location" typeof="schema:Place">
+                    <span property="schema:address" typeof="schema:PostalAddress">
+                      <span property="schema:addressLocality">Iași</span>,
+                      <span property="schema:addressRegion">Iași</span>,
+                      <span property="schema:addressCountry">România</span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <section>
+          <h2>Implementare</h2>
+            <h3>Facebook Login</h3>
+              <p>Pentru logarea cu o retea de socializare am ales API-ul Facebook SDK pentru JavaScript.
+                Deoarece aplicatia este in stadiul de development, platforma Facebook for developers ne ofera posibilitatea de a creea utilizatori de testare,
+                generati random. 
+                <br><br>
+                Aceasta functie se conecteaza cu platforma Facebook for developers prin intermediul id-ului aplicatiei, 
+                pentru a accesa de exemplu datele de test create sau informatii despre utilizatori.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/init.png" alt="init function">
+                  <figcaption> Functia de initializare </figcaption>
+                </figure> 
+
+                In momentul in care utilizatorul acceseaza butonul de login, se apeleaza functia Check Login State:
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/check_login_state.png" alt="check login state">
+                  <figcaption> Functia Check Login State </figcaption>
+                </figure> 
+                
+                Astfel se apeleaza functia Status Change Callback,
+                care verifica daca exista un utilizator logat cu Facebook pentru a se loga si in aplicatie si care apeleaza la randul ei functia testAPI.
+
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/status_change_callback.png" alt="status change function">
+                  <figcaption> Functia Status Change Callback </figcaption>
+                </figure> 
+
+
+                Functia test API confirma logarea cu succes a utilizatorului.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/testAPI.png" alt="testAPI">
+                  <figcaption> Functia test API </figcaption>
+                </figure> 
+
+                Dupa logare, utilizatoru leste redirectat pe pagina principala:
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/redirect.png" alt="redirectare">
+                  <figcaption> Functia de redirectare </figcaption>
+                </figure> 
+
+
+
+              </p>
+            <h3>Profil</h3>
+            <p>
+              Pagina de profil este populata cu informatii din profilul de Facebook al utilizatorului.
+              In momentul logarii este apelata functia getInfo:
+
+              <figure typeof = "sa:Image">
+                <img src="for_progress/get_info.png" alt="get info">
+                <figcaption> Functia de preluare informatii despre utilizator</figcaption>
+              </figure>
+            </p>
+            
+            <h3>Notificare</h3>
+              <p>
+                Pentru notificare in afara browser-ului am folosit Notification API. Atunci cand exista o alerta noua,
+                este apelata functia sendNotification:
+
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/send.png" alt="send notification">
+                  <figcaption> Functia de notificare</figcaption>
+                </figure>
+                Se creeaza obiectul de tip notificare, se verifica daca exista permisiunea de a afisa notificari,
+                apoi atunci cand utilizatorul acceseaza fereastra notificarii este redirectat pe pagina de alerte unde va vedea noua alerta de alergie.
+              </p>
+            <h3>Share</h3>
+              <p>
+                Atunci cand utilizatorul este notificat in legatura cu o alerta, are posibilitate de a-si notifica prietenii printr-un share.
+                Se va deschide o fereastra de share in care utilizatorul va introduce informatia dorita.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/share.png" alt="share notification">
+                  <figcaption> Functia de distribuire</figcaption>
+                </figure>
+              </p>
+            <h3>Statistici</h3>
+              <p>
+                Statisticile sunt salvate in campul "statistics" din json-ul alerta si contin: Cate persoane din 100 au acea alergie,
+                Cate persoane din 100 au avut probleme grave din cauza alergiei si Cate persoane din 100 sunt neafectate.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/stat.png" alt="spa">
+                  <figcaption> Statistics</figcaption>
+                </figure>
+              </p>
+            <h3>Single Page Aplicattion</h3>
+              <p>
+                Aplicatia este implementata dupa modelul single page ce se bazeaza pe concepte foarte simple si anume: Nu se incarca aceeasi resursa de mai multe ori,
+                Navigarea de pe o pagina pe alta nu este prin redirectionare ci se adauga continutul in pagina curenta, dar aici apar complicatii, si anume: cand incarcam scripturile
+                sau stilurile ce au fost rezolvate cu o functie "loadcssjsfile" care incarca un fisier css sau js la cerere, iar continutul html este pe baza unor template-uri 
+                incarcate la fel in functie de "#pagina" din URL.
+
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/spa1.png" alt="spa">
+                  <figcaption> Single Page Aplication</figcaption>
+                </figure>
+              </p>
+              <h3>Workflow notificare</h3>
+              <p>
+                Aplicatia creeaza un worker care la un anume interval creeaza un request ajax la un server python simplu pentru fisierul "alerta.txt" ce contine o alerta in format JSON stringified daca aceasta este diferita fata ultima alerta stocata
+                in localStorage sub cheia "latestAlert" va trimite notificare.
+                O alerta poate avea o frecventa setata in campul "frequency". frequency.interval reprezinta o data la cate zile(in scopul demonstrarii o zi este de fapt 10secunde) iar frequency.times reprezinta de cate ori sa notifice acea alerta.
+                O alerta cu frequency este salvata in localStorage sub cheia "frqAlert" iar worker-ul verifica daca alerta stocata acolo indeplineste conditiile(interval satisface conditia si times > 1) si eventual notifica.
+                <figure typeof = "sa:Image">
+                  <img src="for_progress/spa2.png" alt="spa">
+                  <figcaption> Crearea alertei</figcaption>
+                </figure>
+              </p>
+
+
+
+        </section>
+
+
+        <section>
+          <h2>Testare</h2>
+          <p>
+            Pentru aplicatia noastra am folosit testare manuala. Multe bug-uri au fost descoperite si rezolvate de-a lungul dezvoltarii aplicatiei.
+            Au existat unele bug-uri din cauza faptului ca aplicatia a fost dezvoltata pe localhost, 
+            altele din lipsa lucrului cu limbajul JavaScript de-a lungul timpului. Mai sunt cateva lucruri de imbunatatit,
+            dar necesita mai mult timp.
+          </p>
+        </section>
+
+
+
+        <section>
+          <h2>Exploatare practica</h2>
+            <p>
+              Aplicatia noastra informeaza utilizatorii cu privire la eventualele alerte de alergii. De asemenea ofera informatii desre alergii,
+              cum ar fi simptome si cauze. Notificarile au loc in afara browser-urui, fapt ce ofera acces rapid la informatie,
+              utilizatorul nu trebuie sa verifice statusul aplicatiei mereu. Are, de asemenea, posibilitatea de a distribui informatiile primite prietenilor lui.
+              Logarea este rapida, facuta cu ajutorul contului de Facebook, ceea ce ofera accesibilitate.
+            </p>
+        </section>
+
+      </section>
+    </article>
+  </body>
+</html>
