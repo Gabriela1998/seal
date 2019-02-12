@@ -281,3 +281,12 @@ footer .footer-element
 
 
 }
+
+
+.hide-statistics{
+  display: none;
+}
+
+.show-statistics{
+  display: inline;
+}
