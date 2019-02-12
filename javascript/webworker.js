@@ -40,6 +40,7 @@ function handleResponse(msg){
   // console.log("alerta din get"+msg.data);
   // localStorage.setItem("latestAlerts", msg.data);
   if(alert != msg.data){
+    console.log(msg.data);
     // localStorage.setItem("latestAlerts", msg.data);
     // if(msg.data.severity > alerts.severity)
     localStorage.setItem("latestAlert", msg.data);
