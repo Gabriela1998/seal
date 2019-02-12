@@ -63,13 +63,13 @@
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '387362528682096',
-      cookie     : true,  // enable cookies to allow the server to access 
+      cookie     : true,  // enable cookies to allow the server to access
                           // the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v3.2' // The Graph API version to use for the call
     });
 
-    // Now that we've initialized the JavaScript SDK, we call 
+    // Now that we've initialized the JavaScript SDK, we call
     // FB.getLoginStatus().  This function gets the state of the
     // person visiting this page and can return one of three states to
     // the callback you provide.  They can be:
@@ -119,7 +119,7 @@
     });
 
  FB.Event.subscribe('auth.login', function () {
-          window.location = "http://localhost/try/index.html";
+          window.location = "http://localhost/seal/";
       });
     // window.location.href="index.html";
   }
@@ -148,14 +148,14 @@
             var friends = document.getElementById('friends');
             var div = document.createElement("div");
             for (let i=0; i<response['data'].length; i++) {
-                div.innerHTML += response['data'][i]['name'];  
-                div.innerHTML += "<br>";     
-                friends.insertAdjacentElement('afterend',div);       
+                div.innerHTML += response['data'][i]['name'];
+                div.innerHTML += "<br>";
+                friends.insertAdjacentElement('afterend',div);
             }
           }
-          
+
         }
-      ) 
+      )
     }
 
 
@@ -165,12 +165,12 @@ function logOut(){
   // user is now logged out
   });
    FB.Event.subscribe('auth.login', function () {
-          window.location = "http://localhost/try/index.html";
+          window.location = "http://localhost/seal/";
       });
 }
 
 function redirect(){
-  window.location="http://localhost/try/index.html";
+  window.location="http://localhost/seal/";
   // FB.Event.subscribe('auth.login', function(){
   //   window.location = "http://localhost/try/index.html#home";
   //   });

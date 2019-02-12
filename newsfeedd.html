@@ -36,4 +36,31 @@
       <p id="symptoms-content"></p>
     </div>
   </div>
+
+    <hr class="for-alert-list">
+
+    <div class="topic">
+      <div class="mini-title">
+        <h2>Treatment</h2>
+      </div>
+
+      <div class="content">
+        <p id="treatment-content"></p>
+      </div>
+    </div>
+
+    <div class="topic">
+      <div class="mini-title">
+        <h2>Statistics</h2>
+      </div>
+
+      <div class="content">
+        <button onclick="displayStats()" id="stat-button" class="edit-button">Show/Hide</button>
+        <div id="statistics-content" class = "hide-statistics">
+          <p>Slice = 100 people <br> Green = unaffected people <br> Blue = affected people <br> Red = severe cases</p>
+          <svg id="svg-casesPerHundred" viewBox="-1 -1 2 2" style="transform: rotate(-90deg)"></svg>
+        </div>
+      </div>
+    </div>
+
 </div>
