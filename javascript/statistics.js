@@ -42,6 +42,6 @@ function showStats(alert){
   });
 }
 
-aleert = localStorage.getItem("shownAlert");
+aleert = localStorage.getItem("latestAlert");
 // console.log();
 showStats(JSON.parse(aleert));

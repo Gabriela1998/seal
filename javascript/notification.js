@@ -13,7 +13,7 @@ function sendNotification (data) {
 
             notification.onclick = function(event) {
             event.preventDefault(); // prevent the browser from focusing the Notification's tab
-            window.location = "http://localhost/seal/index.html#newsfeed";
+            window.location = "http://localhost/seal/newsfeedd";
             notification.close();
             }
         }
