@@ -42,23 +42,38 @@
 // }
 
 
-// var alertaJSON = {'id' : 1,
-//  'title' : 'Do You Have Winter Allergies?',
-//  'topics' : [
-//    'Intro', 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
-//    'Causes', 'When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. Some common indoor allergy triggers are:Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.',
-//    'Symptoms', 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
-//    ] };
-//
+var alertaJSON = {'id' : 1,
+ 'title' : 'Do You Have Winter Allergies?',
+ 'topics' : [
+   'Intro', 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
+   'Causes', 'When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. Some common indoor allergy triggers are:Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.',
+   'Symptoms', 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
+   ] };
+
+alertaJSON = {
+  'id' : 1,
+  'title' : 'People With Sun Allergy (Photosensitivity) Are In Danger',
+  'intro' : 'Nasa announced recently a gamma ray burst coming from the sun, wich means people with sesitivity to light should not leave the house',
+  'causes' : 'Causes are still unknown by biologists, it is a DNA mutation but the exact cause of it happening in the first place is unknown.',
+  'symptoms' : 'Symptoms are very subtle untill our sun throws a surprise, your skin is a little more red in the summer when you expose more of your body to direct sun light, you may have just a more sensitive skin in general.',
+  'severity' : 5,
+  'frequency' : {'interval' : 1, 'times' : 7},
+  'statistics' : {  'casesPerHundred' : 4, 'costsComparedToSalary' : 0, 'severeCasesPerHundred' : 20, 'shouldYouBeWorried' : 10},
+  'treatment' : 'There is no real treatment for this, except natural hidratant creams  wich just gets rid of the symptoms but not the problem'
+}
 alertaJSON = {
   'id' : 1,
   'title' : 'Do You Have Winter Allergies?',
-  'intro' : 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
-  'causes' : 'When it gets cold and your furnace kicks on, it sends dust, mold spores, and insect parts into the air. They can get into your nose and launch a reaction. Some common indoor allergy triggers are:<br>Dust mites . These microscopic bugs flourish in mattresses and bedding. When their droppings and remains become airborne, they can cause allergy symptoms.<br>Mold. This fungus thrives in damp, humid areas such as basements and bathrooms. When mold spores get into the air, they can trigger allergy symptoms.',
+  'Intro' : 'If you’re allergic to pollen, you may get a break when the weather gets cold. But if you have indoor allergies such as mold and dust mites, you may notice your allergy symptoms more during winter, when you spend more time inside.',
+  'causes' : 'Causes are still unknown by biologists, it is a DNA mutation but the exact cause of it happening in the first place is unknown.',
   'symptoms' : 'Allergy symptoms caused by dust, pollen, or mold include:Coughing Dark circles under the eyes Itchy eyes and nose Runny nose How can you tell whether your symptoms are from a cold, the flu, or allergies? A cold usually doesnt last for more than 10 days. Allergies can linger for weeks or even months. Also, colds and flu sometimes have a fever and aches and pains, which don’t usually happen with allergies.',
-  'severity' : 1,
-  'frequency' : {'interval' : 5, 'times' : 4}
+  'severity' : 5,
+  'frequency' : {'interval' : 1, 'times' : 7},
+  'statistics' : {  'casesPerHundred' : 4, 'costsComparedToSalary' : 0, 'severeCasesPerHundred' : 20, 'shouldYouBeWorried' : 10},
+  'treatment' : 'There is no real treatment for this, except natural hidratant creams  wich just gets rid of the symptoms but not the problem'
 }
+// frequency.interval is in days , frequency.times is how many times to trigger the notification
+console.log(JSON.stringify(alertaJSON));
 //
 //
 alertToShow = localStorage.getItem("latestAlerts");

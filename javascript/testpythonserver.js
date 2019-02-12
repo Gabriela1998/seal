@@ -1,6 +1,7 @@
 function postResponse(response){
-  self.postMessage(response);
-  self.unregister();
+  if(response != null){
+    self.postMessage(response);
+  }
 }
 
 

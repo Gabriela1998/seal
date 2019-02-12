@@ -19,23 +19,31 @@ loadjscssfile("javascript/notification.js", "js");
 // var oneMinuteFetcher = new Worker("javascript/testpythonserver.js");
 
 function handleResponse(msg){
+  console.log(msg.data);
   alerts = localStorage.getItem("latestAlerts");
   // console.log("alerta din local"+alerts);
   // console.log("alerta din get"+msg.data);
+  localStorage.setItem("latestAlerts", msg.data);
   if(alerts != msg.data){
-    localStorage.setItem("latestAlerts", msg.data);
+    // localStorage.setItem("latestAlerts", msg.data);
+    // if(msg.data.severity > alerts.severity)
+    if(JSON.parse(msg.data).frequency.times > 1){
+      //alert with frequency
+      localStorage.setItem("frqAlert", msg.data);
+      console.log(counter);
+    }
     notify();
   }
 }
+var counter = 1;
+
+var oneMinuteFetcher = new Worker("javascript/testpythonserver.js");
+oneMinuteFetcher.addEventListener('message', handleResponse);
 
 
-
-
-var counter = 0;
 
 setInterval(function(){
   var oneMinuteFetcher = new Worker("javascript/testpythonserver.js");
-  oneMinuteFetcher.addEventListener('message', handleResponse);
   counter++;
   console.log(counter);
 
