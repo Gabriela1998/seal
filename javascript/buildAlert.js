@@ -99,6 +99,16 @@ alertToShow = localStorage.getItem("latestAlert");
 alertToShow = JSON.parse(alertToShow);
 fillAlertWithContent(alertToShow);
 localStorage.setItem("shownAlert",JSON.stringify(alertToShow));
+
+function displayStats(){
+  content = document.getElementById("statistics-content");
+  if(content.className == "hide-statistics"){
+    content.className = "show-statistics";
+  }else{
+    content.className = "hide-statistics";
+  }
+
+}
 // fillAlertWithContent(alertToShow);
 // console.log(JSON.stringify(alertaJSON));
 
